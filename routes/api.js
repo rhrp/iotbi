@@ -81,14 +81,17 @@ function apiSelector(req,res,next)
    var lQuery = lUrlParts.query;
    var lFromDate = lQuery.fromDate;
    var lToDate = lQuery.toDate;
+   var lFiwareService = req.params.fiwareService
+   
    if (lFromDate==undefined && lToDate==undefined)
    {
-        console.log('Broker API');
+        console.log('Broker API - Broker: '+apiConfig.getBrokerName(lFiwareService));
         apiOrionNGSILib.service(req,res,next); 
    }
    else
    {
-        console.log('NGSI Temporal/QuantumLeap API');
+        console.log('NGSI Temporal/QuantumLeap API - Broker: '+apiConfig.getBrokerName(lFiwareService)
+							     +(apiConfig.isBrokerSuportsTemporalAPI(lFiwareService)?' (Entities and Temporal Data)':' and QuantumLeap for temporal data'));
         apiQuantumLeap.service(req,res,next);
    }
    console.log('Wait API...');
