@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  ld-context:
+    image: httpd:alpine
+    hostname: context
+    container_name: iotbi-ld-context
+    networks:
+      - iotbi_net
+    ports:
+      - "80"
+    volumes:
+      - type: bind
+        source: /home/rhp/git/fiware-my-howto/fiware-context/
+        target: /usr/local/apache2/htdocs/
+networks:
+  iotbi_net:
+    name: iotbi_net
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.name: br-iotbi
