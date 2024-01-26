@@ -1,11 +1,11 @@
 var express = require('express');
-//var request = require('request');
 var url  = require('url');
 var router = express.Router();
 var apiConfig = require('../lib/apiConfig.js');
-var apiOrion = require('../lib/apiOrion.js');
-var apiOrionNGSILib = require('../lib/apiOrionNGSILib.js');
-var apiQuantumLeap = require('../lib/apiQuantumLeap.js');
+var apiOrion = require('../lib/apiOrion.js');// Deprecated  module
+var apiCurrentState = require('../lib/apiCurrentState.js');
+var apiTemporal = require('../lib/apiTemporal.js');
+var debug = require('debug')('iotbi.route');
 
 const PARAM_APPKEY	=	'appKey';
 
@@ -14,7 +14,7 @@ function validateToken(req,res,next)
    var lOk=false;
    if(!apiConfig.security.enabled)
    {
-	console.log('Security is disabled');
+	debug('Security is disabled');
         lOk=true;
    }
    else
@@ -22,18 +22,18 @@ function validateToken(req,res,next)
         var lAppKey=req.query[PARAM_APPKEY];
 	if(lAppKey!=null)
 	{
-           console.log('QueryString appKey: '+lAppKey);
+           debug('QueryString appKey: '+lAppKey);
         }
         else
         {
            lAppKey=req.headers[PARAM_APPKEY.toLowerCase()];
            if(lAppKey!=null)
            {
-	     console.log('Header appKey: '+lAppKey);
+	     debug('Header appKey: '+lAppKey);
            }
 	   else
            {
-             console.log('Security is enabled, but no appKey was provided');
+             debug('Security is enabled, but no appKey was provided');
            }
         }
         if(lAppKey!=null)
@@ -44,7 +44,7 @@ function validateToken(req,res,next)
               if(lAppKey==lKey)
               {
                   var k=apiConfig.security.appKeys[lKey];
-                  console.log('Found the key '+k.name+' :: daily limit is '+k.limitDay);
+                  debug('Found the key '+k.name+' :: daily limit is '+k.limitDay);
                   lOk=true;
                   break;
               }
@@ -63,7 +63,7 @@ function validateToken(req,res,next)
 	}
 	catch(error)
 	{
-		console.log('Error on next'+error);
+		debug('Error on next'+error);
 	} 
     }
 }
@@ -71,7 +71,10 @@ var gReqCount=0;
 function apiReqCounter(req,res,next)
 {
    gReqCount++;
-   console.log('Request ID:'+gReqCount);
+   var lCurrTime = new Date().getTime();
+   debug('Request ID:'+gReqCount);
+   res.locals.iotbi_reqId=gReqCount;
+   res.locals.iotbi_reqStarted=lCurrTime;
    next();
 }
 function apiSelector(req,res,next)
@@ -85,27 +88,24 @@ function apiSelector(req,res,next)
    
    if (lFromDate==undefined && lToDate==undefined)
    {
-        console.log('Broker API - Broker: '+apiConfig.getBrokerName(lFiwareService));
-        apiOrionNGSILib.service(req,res,next); 
+        debug('Broker API - Broker: '+apiConfig.getBrokerName(lFiwareService));
+        apiCurrentState.service(req,res,next); 
    }
    else
    {
-        console.log('NGSI Temporal/QuantumLeap API - Broker: '+apiConfig.getBrokerName(lFiwareService)
-							     +(apiConfig.isBrokerSuportsTemporalAPI(lFiwareService)?' (Entities and Temporal Data)':' and QuantumLeap for temporal data'));
-        apiQuantumLeap.service(req,res,next);
+        debug('NGSI Temporal/QuantumLeap API - Broker: '+apiConfig.getBrokerName(lFiwareService)
+	  					     +(apiConfig.isBrokerSuportsTemporalAPI(lFiwareService)?' (Entities and Temporal Data)':' and QuantumLeap for temporal data'));
+        apiTemporal.service(req,res,next);
    }
-   console.log('Wait API...');
+   debug('Wait API...');
 }
 
 router.get('/v0/orion/:fiwareService/:entityType',[apiReqCounter,validateToken,apiOrion.service]);
 router.get('/v0/orion/:fiwareService/:entityType/:entityId',[apiReqCounter,validateToken,apiOrion.service]);
-router.get('/v1/orion/:fiwareService/:entityType',[apiReqCounter,validateToken,apiOrionNGSILib.service]);
-router.get('/v1/orion/:fiwareService/:entityType/:entityId',[apiReqCounter,validateToken,apiOrionNGSILib.service]);
-router.get('/v1/ql/:fiwareService/:entityType',[apiReqCounter,validateToken,apiQuantumLeap.service]);
-router.get('/v1/ql/:fiwareService/:entityType/:entityId',[apiReqCounter,validateToken,apiQuantumLeap.service]);
+router.get('/v0/ql/:fiwareService/:entityType',[apiReqCounter,validateToken,apiTemporal.service]);
+router.get('/v0/ql/:fiwareService/:entityType/:entityId',[apiReqCounter,validateToken,apiTemporal.service]);
 router.get('/v1/:fiwareService/:entityType',[apiReqCounter,validateToken,apiSelector]);
 router.get('/v1/:fiwareService/:entityType/:entityId',[apiReqCounter,validateToken,apiSelector]);
-
 
 
 module.exports = router;

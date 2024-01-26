@@ -5,27 +5,26 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('iotbi');
+var debug = require('debug')('iotbi.init');
 var fs=require('fs');
 
 /**
  * Get port from environment and store in Express.
  */
-
-var port = normalizePort(process.env.PORT || '5000');
+var port = normalizePort(process.env.IOTBI_PORT || '5000');
 app.set('port', port);
 
 /**
- * Create HTTP server.
+ * Create HTTP/HTTPS server.
  */
-var use_https = normalizePort(process.env.USE_HTTPS || false);
+var use_https = normalizeBoolean(process.env.IOTBI_USE_HTTPS || false);
 var server=undefined;
 
 if(use_https) {
   var options = {
-    key: fs.readFileSync('/home/rhp/certs/fiware.ruihpereira.com/privkey.pem'),
-    cert: fs.readFileSync('/home/rhp/certs/fiware.ruihpereira.com/cert.pem'),
-    ca: fs.readFileSync('/home/rhp/certs/fiware.ruihpereira.com/chain.pem')
+    key: fs.readFileSync('/home/rhp/certs/api.iotbi.tech/privkey.pem'),
+    cert: fs.readFileSync('/home/rhp/certs/api.iotbi.tech/cert.pem'),
+    ca: fs.readFileSync('/home/rhp/certs/api.iotbi.tech/chain.pem')
   };
   var https = require('https');
   server = https.createServer(options,app);
@@ -44,7 +43,6 @@ server.on('listening', onListening);
 /**
  * Normalize a port into a number, string, or false.
  */
-
 function normalizePort(val) {
   var port = parseInt(val, 10);
 
@@ -60,11 +58,24 @@ function normalizePort(val) {
 
   return false;
 }
+/**
+ * Normalize a string into a boolean
+ */
+function normalizeBoolean(val) {
+  if(val!=undefined && typeof val === 'string')
+  {
+    return val.toLowerCase() === 'true';
+  }
+  else
+  {
+    return false;
+  }
+}
+
 
 /**
  * Event listener for HTTP server "error" event.
  */
-
 function onError(error) {
   if (error.syscall !== 'listen') {
     throw error;
@@ -92,12 +103,10 @@ function onError(error) {
 /**
  * Event listener for HTTP server "listening" event.
  */
-
 function onListening() {
   var addr = server.address();
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-  debug('Listening on ' + bind);
-console.log('Listening on ' + bind);
+  debug('Listening on ' + bind+'   HTTPS:'+use_https);
 }

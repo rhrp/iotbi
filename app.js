@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var apiRouter = require('./routes/api');
 var apiConfig = require('./lib/apiConfig.js');
 var app = express();
+var debug = require('debug')('iotbi.app');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
