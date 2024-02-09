@@ -109,4 +109,5 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind+'   HTTPS:'+use_https);
+  debug('Process id '+`${process.pid}`);
 }

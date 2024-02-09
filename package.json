@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "NODE_ENV=development DEBUG=iotbi.* IOTBI_PORT=5000 IOTBI_USE_HTTPS=false node ./bin/www",
-    "startbg": "NODE_ENV=production IOTBI_PORT=5000 IOTBI_USE_HTTPS=false nohup node ./bin/www>/tmp/pbim.log &"
+    "startfg": "NODE_ENV=development DEBUG=iotbi.* IOTBI_PORT=5000 IOTBI_USE_HTTPS=false node ./bin/www",
+    "startbg": "NODE_ENV=production  DEBUG=iotbi.* IOTBI_PORT=5000 IOTBI_USE_HTTPS=false nohup node ./bin/www>/tmp/iotbi.log &"
   },
   "dependencies": {
     "@json2csv/plainjs": "^6.1.2",
