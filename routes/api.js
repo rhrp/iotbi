@@ -1,11 +1,13 @@
-var express = require('express');
-var url  = require('url');
-var router = express.Router();
-var apiConfig = require('../lib/apiConfig.js');
-var apiOrion = require('../lib/apiOrion.js');// Deprecated  module
-var apiCurrentState = require('../lib/apiCurrentState.js');
-var apiTemporal = require('../lib/apiTemporal.js');
-var debug = require('debug')('iotbi.route');
+const express = require('express');
+const url  = require('url');
+const router = express.Router();
+const apiConfig = require('../lib/apiConfig.js');
+const apiOrion = require('../lib/apiOrion.js');// Deprecated  module
+const apiCurrentState = require('../lib/apiCurrentState.js');
+const apiTemporal = require('../lib/apiTemporal.js');
+const apiSystem = require('../lib/apiSystem.js');
+const accounting = require('../lib/accounting.js')
+const debug = require('debug')('iotbi.route');
 
 const PARAM_APPKEY	=	'appKey';
 
@@ -57,6 +59,12 @@ function validateToken(req,res,next)
    }
    else
    {
+        var lUrl=req.path;   //req.originalUrl;
+        var lCurrTime = new Date().getTime()
+        var lRemoteIP=req.ip;
+        var lFiwareService = req.params.fiwareService
+        accounting.recAccess(lAppKey,lUrl,lFiwareService,lRemoteIP,lCurrTime)
+
 	try
 	{
    		next();
@@ -70,11 +78,12 @@ function validateToken(req,res,next)
 var gReqCount=0;
 function apiReqCounter(req,res,next)
 {
-   gReqCount++;
    var lCurrTime = new Date().getTime();
+   gReqCount++;
    debug('Request ID:'+gReqCount);
    res.locals.iotbi_reqId=gReqCount;
    res.locals.iotbi_reqStarted=lCurrTime;
+
    next();
 }
 function apiSelector(req,res,next)
@@ -100,12 +109,15 @@ function apiSelector(req,res,next)
    debug('Wait API...');
 }
 
+//V0
 router.get('/v0/orion/:fiwareService/:entityType',[apiReqCounter,validateToken,apiOrion.service]);
 router.get('/v0/orion/:fiwareService/:entityType/:entityId',[apiReqCounter,validateToken,apiOrion.service]);
 router.get('/v0/ql/:fiwareService/:entityType',[apiReqCounter,validateToken,apiTemporal.service]);
 router.get('/v0/ql/:fiwareService/:entityType/:entityId',[apiReqCounter,validateToken,apiTemporal.service]);
+//V1
+router.get('/v1/system/cache/contexts',[apiReqCounter,validateToken,apiSystem.serviceCacheContexts]);
+router.get('/v1/system/accounting',[apiReqCounter,validateToken,apiSystem.serviceAccountingAccess]);
 router.get('/v1/:fiwareService/:entityType',[apiReqCounter,validateToken,apiSelector]);
 router.get('/v1/:fiwareService/:entityType/:entityId',[apiReqCounter,validateToken,apiSelector]);
-
 
 module.exports = router;
