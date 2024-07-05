@@ -1,12 +1,25 @@
-#!/usr/bin/env node
+/*!
+ * Copyright(c) 2023-2024 Rui Humberto Pereira
+ * MIT Licensed
+ *
+ * This module implements the bootiing process
+ */
+
 
 /**
  * Module dependencies.
  */
 
 var app = require('../app');
-var debug = require('debug')('iotbi.init');
+var debug = require('debug')('iotbi.boot');
+var cache = require('../lib/cache.js');
 var fs=require('fs');
+
+
+/**
+ * Init the cache subsystem
+ */
+cache.initCache();
 
 /**
  * Get port from environment and store in Express.
@@ -109,5 +122,5 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind+'   HTTPS:'+use_https);
-  debug('Process id '+`${process.pid}`);
+  debug('Process id '+`${process.pid}`+'  TimeZone:'+`${process.env.TZ}`);
 }

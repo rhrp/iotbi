@@ -14,8 +14,11 @@ $ npm run startfg
 $ npm run startbg 
 ```
 
-## Endpoint
+## API Endpoint
 http://127.0.0.1:5000/v1/:firwareService/:entityType[/:entityId]
+
+## WebHDFS API Endpoint
+http://127.0.0.1:5000/webhdfs/v1/
 
 ## Environment variables
 IOTBI_PORT		- Bind port number, by default is 5000

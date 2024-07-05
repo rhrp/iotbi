@@ -3,22 +3,27 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "startfg": "NODE_ENV=development DEBUG=iotbi.* IOTBI_PORT=5000 IOTBI_USE_HTTPS=false node ./bin/www",
-    "startbg": "NODE_ENV=production  DEBUG=iotbi.* IOTBI_PORT=5000 IOTBI_USE_HTTPS=false nohup node ./bin/www>/tmp/iotbi.log &"
+    "startfg": "NODE_ENV=development TZ=Europe/Lisbon DEBUG=iotbi.* IOTBI_PORT=5000 IOTBI_USE_HTTPS=false node ./bin/boot.js",
+    "startbg": "NODE_ENV=production  TZ=Europe/Lisbon DEBUG=iotbi.* IOTBI_PORT=5000 IOTBI_USE_HTTPS=false nohup node ./bin/boot.js>/tmp/iotbi.log &"
   },
   "dependencies": {
+    "@dsnp/parquetjs": "^1.7.0",
     "@json2csv/plainjs": "^6.1.2",
     "child_process": "^1.0.2",
+    "compression": "^1.7.4",
     "cookie-parser": "~1.4.4",
+    "crypto": "^1.0.1",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "ngsi-parser": "^2.2.5",
     "ngsijs": "^1.5.0-rc.0",
+    "npm": "^10.8.0",
     "ocb-sender": "^2.4.4",
     "pug": "2.0.0-beta11",
     "request": "^2.88.2",
-    "turf": "^3.0.14"
+    "turf": "^3.0.14",
+    "uuid": "^9.0.1"
   }
 }
