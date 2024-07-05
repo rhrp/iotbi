@@ -4,7 +4,6 @@ config.security.appKeys['segredo']={name:'Public Key',limitDay:100,scopes:['owm_
 config.security.appKeys['hadoop']={name:'Hadoop user',limitDay:100,scopes:['owm_v1','test_ld','stellio_owm_ld','portodigital'],allowAPI:false,allowHadoop:true};
 config.security.appKeys['rhp']={name:'Hadoop RHP user',limitDay:100,scopes:['owm_v1','test_ld','stellio_owm_ld','portodigital'],allowAPI:false,allowHadoop:true};
 config.security.appKeys['32a75e5ee9290de53af0b0e55eceea8de88125020b0889e3fa600e956f7r654s']={name:'RHP Key',limitDay:1000,scopes:['owm_v1','cmm_pcp','test_ld'],allowAPI:true,allowHadoop:true};
-config.security.appKeys['37ceec9e755d3ad9f5d4fea8eb0cde8453af0b0e55eceea8de88125020b0884a']={name:'Pedro Pimenta',limitDay:1000,scopes:['owm_v1','cmm_pcp','test_ld'],allowAPI:true,allowHadoop:true};
 config.cache={enabled:true,ttlms:60000,localPath:'/tmp/iotbi/cache'};
 config.logger = {};
 config.logger.access={file:'/tmp/access_iotbi.log',format:'combined'}
