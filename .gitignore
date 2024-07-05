@@ -1,3 +1,4 @@
 node_modules
-listEntities.js
-listEntitiesLD.js
+docker
+tests
+schemas
