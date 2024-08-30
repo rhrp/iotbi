@@ -97,8 +97,8 @@ function apiCheckAccessFiwareService(req,res,next)
     var lAppKey=req.query[PARAM_APPKEY];
     if(!configsys.allowScopeToKey(lAppKey,lFiwareService))
     {
-         debug('Your account have access to this fiware service :: appKey='+lAppKey+' FiwareService='+lFiwareService);
-         res.status(401).send('Your account have access to this fiware service');
+         debug('Your account does not have access to this fiware service :: appKey='+lAppKey+' FiwareService='+lFiwareService);
+         res.status(401).send('Your account does not have access to this fiware service');
     }
     else
     {
