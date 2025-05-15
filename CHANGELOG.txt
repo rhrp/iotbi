@@ -1,0 +1,10 @@
+## [Unreleased] - May 15, 2025
+
+### Changed
+
+*   **Performance:** Improved the overall loading speed of the application.
+
+## [0.0.0] - May 15, 2025
+
+### Added
+*   **Documentation:** This ChangeLog :-)

@@ -2,7 +2,7 @@
  * Copyright(c) 2023-2024 Rui Humberto Pereira
  * MIT Licensed
  *
- * This module implements the bootiing process
+ * This module implements the booting process
  */
 
 
@@ -12,9 +12,12 @@
 
 var app = require('../app');
 var debug = require('debug')('iotbi.boot');
+var version = require('../lib/version.js');
 var cache = require('../lib/cache.js');
 var fs=require('fs');
 
+
+debug('Starting IoTBI ',version.version)
 
 /**
  * Init the cache subsystem
@@ -101,11 +104,11 @@ function onError(error) {
   // handle specific listen errors with friendly messages
   switch (error.code) {
     case 'EACCES':
-      console.error(bind + ' requires elevated privileges');
+      debug(bind + ' requires elevated privileges');
       process.exit(1);
       break;
     case 'EADDRINUSE':
-      console.error(bind + ' is already in use');
+      debug(bind + ' is already in use');
       process.exit(1);
       break;
     default:
