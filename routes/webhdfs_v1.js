@@ -13,7 +13,7 @@ const debug = require('debug')('iotbi.route.webhdfs');
 
 router.get('/user/:hadoopUser',[apiWebHDFS.serviceDebug,apiWebHDFS.serviceCommandRoot]);
 router.get('/:systemService/metadata/:entityType/schema.:outputFormat',  [apiWebHDFS.serviceDebug,apiWebHDFS.serviceWebhdfsAccess,apiWebHDFS.serviceLoadAllMetadata,apiWebHDFS.serviceSystemEntitySchemaFileStats,apiWebHDFS.serviceCommandEntitySchema]);
-router.get('/:systemService/metadata/entities.:outputFormat',            [apiWebHDFS.serviceDebug,apiWebHDFS.serviceWebhdfsAccess,apiWebHDFS.serviceLoadAllMetadata,apiWebHDFS.serviceSystemListOfEntitiesFileStats,apiWebHDFS.serviceCommandCurrentDataset]);
+router.get('/:systemService/metadata/entities.:outputFormat',            [apiWebHDFS.serviceDebug,apiWebHDFS.serviceWebhdfsAccess,apiWebHDFS.serviceLoadAllMetadata,apiWebHDFS.serviceSystemListOfEntitiesFileStats,apiWebHDFS.serviceCommandEntitiesDataset]);
 router.get('/:systemService/metadata/:entityType',                       [apiWebHDFS.serviceDebug,apiWebHDFS.serviceWebhdfsAccess,apiWebHDFS.serviceLoadAllMetadata,apiWebHDFS.serviceCommandFolderSystemEntity]);
 router.get('/:systemService/metadata',                                   [apiWebHDFS.serviceDebug,apiWebHDFS.serviceWebhdfsAccess,apiWebHDFS.serviceLoadAllMetadata,apiWebHDFS.serviceCommandFolderSysMetadata]);
 router.get('/:fiwareService/:entityType/joins/:attribFKey/:joinEntityType/current.:outputFormat',[apiWebHDFS.serviceDebug,apiWebHDFS.serviceWebhdfsAccess,apiWebHDFS.serviceServiceFileStats,apiWebHDFS.serviceCommandCurrentDataset]);
