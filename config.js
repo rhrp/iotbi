@@ -1,11 +1,9 @@
 var config = {};
 config.security={enabled:true,appKeys:{}}
 config.security.appKeys['segredo']={name:'Public Key',limitDay:100,scopes:['owm_v1','test_ld','stellio_owm_ld','portodigital','system'],allowAPI:true,allowHadoop:false};
-config.security.appKeys['hadoop']={name:'Hadoop user',limitDay:100,scopes:['owm_v1','test_ld','stellio_owm_ld','portodigital'],allowAPI:false,allowHadoop:true};
-config.security.appKeys['rhp']={name:'Hadoop RHP user',limitDay:100,scopes:['owm_v1','test_ld','stellio_owm_ld','portodigital'],allowAPI:false,allowHadoop:true};
-config.security.appKeys['32a75e5ee9290de53af0b0e55eceea8de88125020b0889e3fa600e956f7r654s']={name:'RHP Key',limitDay:1000,scopes:['owm_v1','cmm_pcp','test_ld'],allowAPI:true,allowHadoop:true};
-config.security.appKeys['37ceec9e755d3ad9f5d4fea8eb0cde8453af0b0e55eceea8de88125020b0884a']={name:'Pedro Pimenta',limitDay:1000,scopes:['owm_v1','cmm_pcp','test_ld'],allowAPI:true,allowHadoop:true};
-config.cache={enabled:true,ttlms:60000,localPath:'/tmp/iotbi/cache'};
+config.security.appKeys['hadoop']={name:'Hadoop user',limitDay:100,scopes:['owm_v1','test_ld','stellio_owm_ld','portodigital','system'],allowAPI:false,allowHadoop:true};
+config.security.appKeys['rhp']={name:'Hadoop RHP user',limitDay:100,scopes:['owm_v1','test_ld','stellio_owm_ld','portodigital','system'],allowAPI:false,allowHadoop:true};
+config.cache={enabled:true,ttlms:6000,localPath:'/tmp/iotbi/cache'};
 config.logger = {};
 config.logger.access={file:'/tmp/access_iotbi.log',format:'combined'}
 
@@ -16,17 +14,9 @@ config.broker.servers.owm_v1={
 		  host:'orion.orion_net',port:'1026', https:false,
 		  broker:'Orion',ngsi:'v2'
 		};
-config.broker.servers.orion_test_ld={
-                  tenant:'test_ld',
-		  host:'52.49.232.90', port:'2026', https:false,
-		  ngsi:'ldv1', broker:'OrionLD',
-		  ngsildContext:'http://context/ngsi-context.jsonld',
-		  jsonldContext:'http://context/json-context.jsonld',
-                  schemaCommon:['https://smart-data-models.github.io/data-models/common-schema.json'],
-                };
 config.broker.servers.scorpio_test_ld={
                   tenant:'urn:ngsi-ld:test_ld',
-		  host:'172.19.0.6',port:'9090',https:false,
+		  host:'scorpio.scorpio_net',port:'9090',https:false,
                   ngsi:'ldv1',broker:'Scorpio',
 		  ngsildContext:'http://context/ngsi-context.jsonld',
 		  jsonldContext:'http://context/json-context.jsonld',
@@ -58,14 +48,6 @@ config.broker.servers.stellio_owm_ld={
                                 'https://smart-data-models.github.io/dataModel.Device/device-schema.json',
                                 'https://smart-data-models.github.io/dataModel.Environment/Environment-schema.json',
                                 'https://raw.githubusercontent.com/smart-data-models/dataModel.Environment/master/Environment-schema.json']
-                };
-config.broker.servers.cmm_pcp={
-                  tenant:'urn:ngsi-ld:tenant:pcp',
-                  host:'stellio.stellio_net',port:'8080',https:false,
-                  ngsi:'ldv1',broker:'Stellio',
-                  ngsildContext:'http://context/ngsi-context.jsonld',
-                  jsonldContext:'http://context/json-context.jsonld',
-                  schemaCommon:['https://smart-data-models.github.io/data-models/common-schema.json']
                 };
 config.broker.servers.portodigital={
                   tenant:'',
