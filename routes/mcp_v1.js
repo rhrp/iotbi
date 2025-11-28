@@ -21,25 +21,6 @@ const server = new McpServer({
     version: '1.0.0'
 });
 
-// Add an addition tool
-server.registerTool(
-    'add',
-    {
-        title: 'Addition Tool',
-        description: 'Add two numbers',
-        inputSchema: { a: z.number(), b: z.number() },
-        outputSchema: { result: z.number() }
-    },
-    async ({ a, b }) => {
-	debug('a='+a+' b='+b+' = '+(a+b))
-        const output = { result: a + b };
-        return {
-            content: [{ type: 'text', text: JSON.stringify(output) }],
-            structuredContent: output
-        };
-    }
-);
-
 server.registerTool(
     'getAvailableEntities',
     tools.getAvailableEntitiesMetadata,
@@ -51,7 +32,6 @@ server.registerTool(
     tools.getRelatedEntitiesMetadata,
     tools.getRelatedEntities
 );
-
 
 
 // Add a dynamic greeting resource
