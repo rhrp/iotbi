@@ -13,6 +13,7 @@ var fs=require('fs');
 var indexRouter = require('./routes/index');
 var apiRouter = require('./routes/api');
 var webhdfsV1Router = require('./routes/webhdfs_v1');
+var mcpV1Router = require('./routes/mcp_v1');
 var configsys = require('./lib/configsys.js');
 var app = express();
 //var compression = require('compression')
@@ -36,6 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', apiRouter);
 app.use('/webhdfs/v1', webhdfsV1Router);
+app.use('/mcp', mcpV1Router);
 app.use('/', indexRouter);
 // all AND !/api AND AND !webhdfs
 app.use('(/*)', indexRouter);
