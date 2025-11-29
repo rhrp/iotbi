@@ -155,25 +155,4 @@ config.entityTypes.FillingLevelSensor={
                                          urlContext:'http://context/ngsi-context.jsonld'
                                       }
 
-/**
-config.contexts = {};
-config.contexts.PointOfInterest='https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld';
-config.contexts.AirQualityObserved='https://raw.githubusercontent.com/smart-data-models/dataModel.Environment/master/context.jsonld';
-config.contexts.Building='http://context/ngsi-context.jsonld';
-config.contexts.TemperatureSensor='http://context/ngsi-context.jsonld';
-config.contexts.FillingLevelSensor='http://context/ngsi-context.jsonld';
-
-//Deprecated
-config.schemas = {};
-//Bug typeOfLocation? https://smart-data-models.github.io/dataModel.Environment/AirQualityObserved/schema.json
-config.schemas.AirQualityObserved=['http://context/smart-data-models/dataModel.Environment/AirQualityObserved/schema.json'];
-//config.schemas.PointOfInterest=['http://context/smart-data-models/dataModel.PointOfInterest/PointOfInterest/schema.json'];
-config.schemas.PointOfInterest=['https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/schema.json'];
-config.schemas.Building=['https://smart-data-models.github.io/dataModel.Building/Building/schema.json'];
-config.schemas.TemperatureSensor=['http://context/smart-data-models/rhp/TemperatureSensor.json',
-                                  'https://smart-data-models.github.io/dataModel.Device/Device/schema.json'];
-config.schemas.FillingLevelSensor=['http://context/smart-data-models/rhp/FillingLevelSensor.json',
-                                  'https://smart-data-models.github.io/dataModel.Device/Device/schema.json'];
-
-*/
 exports.config=config;

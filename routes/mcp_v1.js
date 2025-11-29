@@ -89,7 +89,6 @@ function serviceDebug(req,res,next)
 
 function serviceAuth(req,res,next)
 {
-   //authorization=Bearer 01583265018ff95cdc418f26da309f756a9e42948e5dce899fc07a7016430f0b
    var lHeaderAuthorization=req.headers['authorization'];
    var lToken=lHeaderAuthorization!=undefined?lHeaderAuthorization.split(' ')[1]:undefined;
    if(lToken==undefined)
