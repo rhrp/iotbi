@@ -3,7 +3,7 @@
 # Author: rui Humberto Pereira <rui.humberto.pereira@gmail.com>
 # Date: 2025/Ago/27
 # 
-ENV="NODE_ENV=production TZ=Europe/Lisbon DEBUG=iotbi.* IOTBI_PORT=5000 IOTBI_USE_HTTPS=false "
+ENV="NODE_ENV=production TZ=Europe/Lisbon DEBUG=iotbi.* IOTBI_PORT=5000 MCP_APPKEY=rhp IOTBI_USE_HTTPS=false "
 COMMAND="node ./bin/boot.js"
 FILE_LOG="/tmp/iotbi/iotbi.log"
 FILE_PID="/tmp/iotbi/iotbi.pid"

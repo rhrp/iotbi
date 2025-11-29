@@ -23,12 +23,8 @@ config.security.appKeys['rhp']={
                                     allowHadoop:true,
                                     hiddenEntities:{'portodigital':['PointOfInterest','Alert']}
                                };
-//60000 (60s)
-//MCP Definitions
-config.mcp={}
-config.mcp.appKey='rhp';
-
 //Cache
+//60000 (60s)
 config.cache={enabled:true,ttlms:3600000,localPath:'/tmp/iotbi/cache'};
 
 //Logger

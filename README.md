@@ -39,3 +39,5 @@ IOTBI_PORT		- Bind port number, by default is 5000
 IOTBI_USE_HTTPS	- Enables HTTPS security, by default is false. Requires additional file certificates
 
 DEBUG=iotbi.*		- Namespace for debugging 
+
+MCP_APPKEY              - AppKey allowed to use MCP endpoint
