@@ -1,4 +1,10 @@
-## [Unreleased] - May 15, 2025
+## [1.1.0] - Jan 16, 2026
+
+### Added
+    ** A new interface based on an MCP server has been introduced, providing various tools for use by AI agents.
+
+### Updated
+    ** Several improvements to the webhdfs interface.
 
 ## [1.0.0] - May 15, 2025
 

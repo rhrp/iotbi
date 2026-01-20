@@ -15,43 +15,125 @@ var express = require('express');
 var router = express.Router();
 var debug = require('debug')('iotbi.route.mcp');
 
-// Create an MCP server
-const server = new McpServer({
-    name: 'iotbi-mcp',
-    version: '1.0.0'
-});
+/**
+ * List of Fiware Services allowed to MCP
+ */
+function getAllowedServices()
+{
+     var lUser=configsys.getMcpAppKey();
+     var lAliasArray=configsys.getBrokersAliasList();
+     var lServices=[];
+     for(var i in lAliasArray)
+     {
+         if(configsys.allowScopeToUser(lUser,lAliasArray[i]) && configsys.isConfigOk(lAliasArray[i]) && configsys.isVersionLDV1(lAliasArray[i]))
+         {
+             lServices.push(lAliasArray[i]);
+         }
+     }
+     debug('User: '+lUser+' Allowed Services: '+JSON.stringify(lServices));
+     return lServices
+}
 
-server.registerTool(
-    'getAvailableEntities',
-    tools.getAvailableEntitiesMetadata,
-    tools.getAvailableEntities
+
+
+function bootServer()
+{
+   // Create an MCP server
+   const server = new McpServer({
+     name: 'iotbi-mcp',
+     version: '1.0.0'
+   });
+
+   server.registerTool(
+     'getAvailableEntities',
+     tools.getAvailableEntitiesMetadata,
+     tools.getAvailableEntities
+   );
+
+   server.registerTool(
+     'getRelatedEntities',
+     tools.getRelatedEntitiesMetadata,
+     tools.getRelatedEntities
+   );
+
+   server.registerTool(
+     'getGeoMetadata',
+     tools.getGeoMetadataMetadata,
+     tools.getGeoMetadata
+   );
+
+   server.registerTool(
+     'getGraphEntities',
+     tools.getGraphEntitiesMetadata,
+     tools.getGraphEntities
+   );
+
+     // Static resource
+     server.resource(
+       "config",
+       "config://app",
+        async (uri) => ({
+          contents: [{
+           uri: uri.href,
+           text: "App config"
+        }]
+     })
 );
 
-server.registerTool(
-    'getRelatedEntities',
-    tools.getRelatedEntitiesMetadata,
-    tools.getRelatedEntities
-);
-
-
-// Add a dynamic greeting resource
-server.registerResource(
-    'greeting',
-    new ResourceTemplate('greeting://{name}', { list: undefined }),
-    {
+   // Add a dynamic greeting resource
+   server.registerResource(
+     'greeting',
+      new ResourceTemplate('greeting://{name}', { list: undefined }),
+      {
         title: 'Greeting Resource', // Display name for UI
         description: 'Dynamic greeting generator'
-    },
-    async (uri, { name }) => ({
+      },
+      async (uri, { name }) => ({
         contents: [
             {
                 uri: uri.href,
                 text: `Hello, ${name}!`
             }
         ]
-    })
+      })
+    );
+
+
+/**
+ * uri,entityType,georel,geometry,coordinates,geoproperty,attribList,b64query,b64textPattern
+ */
+server.resource(
+  "ngsi-entity-textPattern",
+  new ResourceTemplate("ngsildv1://{entityType}/{georel}/{geometry}/{coordinates}/{geoproperty}/{b64textPattern}/textPattern", { list: undefined }),
+  async (uri, { entityType,georel,geometry,coordinates,geoproperty,b64textPattern }) => (tools.ngsiQuery(uri,entityType,undefined,georel,geometry,coordinates,geoproperty,undefined,b64textPattern))
 );
 
+server.resource(
+  "ngsi-entity-attrs-query",
+  new ResourceTemplate("ngsildv1://{entityType}/{attribList}/{georel}/{geometry}/{coordinates}/{geoproperty}/{b64query}/query", { list: undefined }),
+  async (uri, { entityType,attribList,georel,geometry,coordinates,geoproperty,b64query}) => (tools.ngsiQuery(uri,entityType,attribList,georel,geometry,coordinates,geoproperty,b64query,undefined))
+);
+
+server.resource(
+  "ngsi-entity-attrs",
+  new ResourceTemplate("ngsildv1://{entityType}/{attribList}/{georel}/{geometry}/{coordinates}/{geoproperty}/data", { list: undefined }),
+  async (uri, { entityType,attribList,georel,geometry,coordinates,geoproperty}) => (tools.ngsiQuery(uri,entityType,attribList,georel,geometry,coordinates,geoproperty))
+);
+
+server.resource(
+  "ngsi-entity",
+  new ResourceTemplate("ngsildv1://{entityType}/data", { list: undefined }),
+  async (uri, { entityType}) => (tools.ngsiQuery(uri,entityType))
+);
+
+
+
+
+    router.post('*',[serviceDebug,serviceAuth,apiSystem.serviceLoadAllMetadata,serviceMcp]);
+    module.exports = router;
+
+    return server;
+}
 
 function serviceMcp(req,res,next)
 {
@@ -135,5 +217,4 @@ function sendError(res,pCode,pMsg)
 }
 
 
-router.post('*',[serviceDebug,serviceAuth,apiSystem.serviceLoadAllMetadata,serviceMcp]);
-module.exports = router;
+const server=bootServer();

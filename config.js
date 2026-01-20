@@ -3,7 +3,7 @@ config.security={enabled:true,appKeys:{}}
 config.security.appKeys['segredo']={
                                     name:'Public Key',
                                     limitDay:100,
-                                    scopes:['owm_v1','test_ld','stellio_owm_ld','portodigital','system'],
+                                    scopes:['owm_v1','test_ld','stellio_owm_ld','stellio_test_1','portodigital','system'],
                                     allowAPI:true,
                                     allowHadoop:false,
                                     hiddenEntities:{}
@@ -114,7 +114,7 @@ config.broker.servers.stellio_owm_ld={
 config.broker.servers.portodigital={
                   tenant:'',
                   host:'broker.fiware.urbanplatform.portodigital.pt',port:'443', https:true,
-                  broker:'Orion',ngsi:'v2'
+                  ngsi:'v2',broker:'Orion'
                 };
 
 config.quantumleap = {};

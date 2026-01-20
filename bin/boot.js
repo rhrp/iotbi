@@ -9,52 +9,42 @@
 /**
  * Module dependencies.
  */
-
-var app = require('../app');
 var debug = require('debug')('iotbi.boot');
 var version = require('../lib/version.js');
 var cache = require('../lib/cache.js');
 var fs=require('fs');
+var ngsildcontext = require('../lib/ngsildcontext.js');
+var configsys = require('../lib/configsys.js'); 
 
 
 debug('Starting IoTBI ',version.version)
-
-/**
- * Init the cache subsystem
- */
-cache.initCache();
-
 /**
  * Get port from environment and store in Express.
  */
 var port = normalizePort(process.env.IOTBI_PORT || '5000');
-app.set('port', port);
+var use_https = normalizeBoolean(process.env.IOTBI_USE_HTTPS || false);
 
 /**
  * Create HTTP/HTTPS server.
  */
-var use_https = normalizeBoolean(process.env.IOTBI_USE_HTTPS || false);
-var server=undefined;
-
-if(use_https) {
-  var options = {
-    key: fs.readFileSync('/home/rhp/certs/api.iotbi.tech/privkey.pem'),
-    cert: fs.readFileSync('/home/rhp/certs/api.iotbi.tech/cert.pem'),
-    ca: fs.readFileSync('/home/rhp/certs/api.iotbi.tech/chain.pem')
-  };
-  var https = require('https');
-  server = https.createServer(options,app);
-} else {
- var http = require('http');
- server = http.createServer(app);
+function startServer(app)
+{
+  app.set('port', port);
+  if(use_https) {
+    var options = {
+      key: fs.readFileSync('/home/rhp/certs/api.iotbi.tech/privkey.pem'),
+      cert: fs.readFileSync('/home/rhp/certs/api.iotbi.tech/cert.pem'),
+      ca: fs.readFileSync('/home/rhp/certs/api.iotbi.tech/chain.pem')
+    };
+    var https = require('https');
+    server = https.createServer(options,app);
+  } else {
+    var http = require('http');
+    server = http.createServer(app);
+  }
+  return server;
 }
 
-/**
- * Listen on provided port, on all network interfaces.
- */
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
 
 /**
  * Normalize a port into a number, string, or false.
@@ -127,3 +117,34 @@ function onListening() {
   debug('Listening on ' + bind+'   HTTPS:'+use_https);
   debug('Process id '+`${process.pid}`+'  TimeZone:'+`${process.env.TZ}`);
 }
+
+
+
+var server=undefined;
+/**
+ * Init the cache subsystem
+ */
+cache.initCache();
+
+/**
+ *
+ */
+ngsildcontext.createPromisesloadNgsiContext(configsys.getBrokersAliasList(),configsys.getKnownEntityTypes())
+        .then(() => {
+           
+           debug('All schemas were loaded');
+           var app = require('../app');
+           server=startServer(app);
+          /**
+            * Listen on provided port
+            */
+          server.listen(port);
+          server.on('error', onError);
+          server.on('listening', onListening);
+        })
+        .catch((err) => {
+           debug(err);
+        });
+
+debug('Waiting server...');
+
