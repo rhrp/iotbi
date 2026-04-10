@@ -23,7 +23,7 @@ router.get('/*.[a-zA-Z0-1]{0,5}', function(req, res, next) {
   res.render('error404', { title: 'Page not found',message:'Page not found',detail:'filename' });
 });
 router.get('/*', function(req, res, next) {
-  debug('Serving index page of a directory');
+  debug('Serving index page of a directory. URI='+req.url);
   res.render('error404', { title: 'Index page not found',message:'Index Page not found',detail:'filename' });
 });
 

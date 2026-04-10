@@ -1,4 +1,4 @@
 node_modules
+huggingface_models
 docker
 tests
-schemas

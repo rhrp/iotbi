@@ -15,8 +15,10 @@ var apiRouter = require('./routes/api');
 var webhdfsV1Router = require('./routes/webhdfs_v1');
 var mcpV1Router = require('./routes/mcp_v1');
 var configsys = require('./lib/configsys.js');
+var perfanalyser= require('./lib/performenceanalyser.js');
 var app = express();
 //var compression = require('compression')
+const utils = require('./lib/utils.js');
 var debug = require('debug')('iotbi.app');
 
 // compress responses
@@ -35,12 +37,32 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+let concurrentRequests = 0;
+// Middleware para contar pedidos ativos
+app.use((req, res, next) => {
+  concurrentRequests++;
+  debug(`Start Request::Active Requests: ${concurrentRequests}`);
+  utils.setRequestConcurrency(res,concurrentRequests);
+  perfanalyser.setState(concurrentRequests);
+  res.on('close', () => {
+    concurrentRequests--;
+    debug(`End Request::Active Requests: ${concurrentRequests}`);
+    utils.setRequestConcurrency(res,concurrentRequests);
+    perfanalyser.setState(concurrentRequests);
+  });
+  next();
+});
+
+//3 per sec
+setInterval(perfanalyser.hookTimedMetrics,333);
+
 app.use('/api', apiRouter);
 app.use('/webhdfs/v1', webhdfsV1Router);
 app.use('/mcp', mcpV1Router);
 app.use('/', indexRouter);
 // all AND !/api AND AND !webhdfs
-app.use('(/*)', indexRouter);
+app.use('(/'+'*)', indexRouter);
 
 // catch 403 and forward to error handler
 app.use(function(req, res, next) {

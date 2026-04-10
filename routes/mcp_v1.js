@@ -67,20 +67,26 @@ function bootServer()
      tools.getGraphEntitiesMetadata,
      tools.getGraphEntities
    );
-
-     // Static resource
-     server.resource(
-       "config",
-       "config://app",
+   server.registerTool(
+     'execQueryNGSI',
+     tools.execQueryNGSIMetadata,
+     tools.execQueryNGSI
+   );
+   // Static resource
+   server.resource(
+       "info",
+       "info://app",
         async (uri) => ({
           contents: [{
            uri: uri.href,
-           text: "App config"
-        }]
-     })
-);
+           text: "This MCP server provides an interface to a federated NGSI ecosystem."
+           }]
+        })
+   );
+
 
    // Add a dynamic greeting resource
+   /*
    server.registerResource(
      'greeting',
       new ResourceTemplate('greeting://{name}', { list: undefined }),
@@ -97,42 +103,45 @@ function bootServer()
         ]
       })
     );
+    */
 
+    /**
+     * function(uri,entityType,attribList,b64georel,b64geometry,b64coordinates,geoproperty,b64query,b64textPattern,entityId)
+     */
+     server.resource(
+       "ngsi-entity-textPattern",
+       new ResourceTemplate("ngsildv1://{entityType}/{georel}/{geometry}/{coordinates}/{geoproperty}/{b64textPattern}/textPattern", { list: undefined }),
+       async (uri, { entityType,georel,geometry,coordinates,geoproperty,b64textPattern }) => (tools.ngsiQuery(uri,entityType,undefined,georel,geometry,coordinates,geoproperty,undefined,b64textPattern,undefined))
+     );
 
-/**
- * uri,entityType,georel,geometry,coordinates,geoproperty,attribList,b64query,b64textPattern
- */
-server.resource(
-  "ngsi-entity-textPattern",
-  new ResourceTemplate("ngsildv1://{entityType}/{georel}/{geometry}/{coordinates}/{geoproperty}/{b64textPattern}/textPattern", { list: undefined }),
-  async (uri, { entityType,georel,geometry,coordinates,geoproperty,b64textPattern }) => (tools.ngsiQuery(uri,entityType,undefined,georel,geometry,coordinates,geoproperty,undefined,b64textPattern))
-);
+     server.resource(
+       "ngsi-entity-attrs-query",
+       new ResourceTemplate("ngsildv1://{entityType}/{attribList}/{georel}/{geometry}/{coordinates}/{geoproperty}/{b64query}/query", { list: undefined }),
+       async (uri, { entityType,attribList,georel,geometry,coordinates,geoproperty,b64query}) => (tools.ngsiQuery(uri,entityType,attribList,georel,geometry,coordinates,geoproperty,b64query,undefined,undefined))
+     );
 
-server.resource(
-  "ngsi-entity-attrs-query",
-  new ResourceTemplate("ngsildv1://{entityType}/{attribList}/{georel}/{geometry}/{coordinates}/{geoproperty}/{b64query}/query", { list: undefined }),
-  async (uri, { entityType,attribList,georel,geometry,coordinates,geoproperty,b64query}) => (tools.ngsiQuery(uri,entityType,attribList,georel,geometry,coordinates,geoproperty,b64query,undefined))
-);
+     server.resource(
+       "ngsi-entity-attrs",
+       new ResourceTemplate("ngsildv1://{entityType}/{attribList}/{georel}/{geometry}/{coordinates}/{geoproperty}/data", { list: undefined }),
+       async (uri, { entityType,attribList,georel,geometry,coordinates,geoproperty}) => (tools.ngsiQuery(uri,entityType,attribList,georel,geometry,coordinates,geoproperty))
+     );
 
-server.resource(
-  "ngsi-entity-attrs",
-  new ResourceTemplate("ngsildv1://{entityType}/{attribList}/{georel}/{geometry}/{coordinates}/{geoproperty}/data", { list: undefined }),
-  async (uri, { entityType,attribList,georel,geometry,coordinates,geoproperty}) => (tools.ngsiQuery(uri,entityType,attribList,georel,geometry,coordinates,geoproperty))
-);
+     server.resource(
+       "ngsi-entity-by-id",
+       new ResourceTemplate("ngsildv1://{entityType}/{entityId}/data", { list: undefined }),
+       async (uri, { entityType,entityId }) => (tools.ngsiQuery(uri,entityType,undefined,undefined,undefined,undefined,undefined,undefined,undefined,entityId))
+     );
 
-server.resource(
-  "ngsi-entity",
-  new ResourceTemplate("ngsildv1://{entityType}/data", { list: undefined }),
-  async (uri, { entityType}) => (tools.ngsiQuery(uri,entityType))
-);
+     server.resource(
+        "ngsi-entity",
+        new ResourceTemplate("ngsildv1://{entityType}/data", { list: undefined }),
+        async (uri, { entityType}) => (tools.ngsiQuery(uri,entityType))
+     );
+     
+     router.post('*',[serviceDebug,serviceAuth,apiSystem.serviceLoadAllMetadata,serviceMcp]);
+     module.exports = router;
 
-
-
-
-    router.post('*',[serviceDebug,serviceAuth,apiSystem.serviceLoadAllMetadata,serviceMcp]);
-    module.exports = router;
-
-    return server;
+     return server;
 }
 
 function serviceMcp(req,res,next)
@@ -149,7 +158,7 @@ function serviceMcp(req,res,next)
     });
     server.connect(transport).then(() => {
            debug('MCP Server connection is UP');
-           debug('appKey='+getRequestAuthAppKey(req));
+           debug('appKey='+getRequestAuthAppKey(req)+'  Method: '+req.body.method );
            transport.handleRequest(req, res, req.body);
         })
         .catch((err) => {
@@ -186,8 +195,16 @@ function serviceAuth(req,res,next)
        sendError(res,403,'Unauthorized');
        return;
    }
+
+   if(!configsys.allowMcpToUser(lAppKey))
+   {
+      debug('Your account does not have permissions for using MCP :: Mcp User='+lAppKey);
+      sendError(res,403,'Your account does not have permissions for using this MCP server');
+      return;
+   }
+
    saveAuthData(req,lAppKey)
-   debug('appKey: '+lAppKey);
+   //debug('appKey: '+lAppKey);
    next();
    debug('Request Auth::Waiting for MCP Server...');
 }

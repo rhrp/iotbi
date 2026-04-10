@@ -16,6 +16,9 @@ const apiTemporal = require('../lib/apiTemporal.js');
 const apiSystem = require('../lib/apiSystem.js');
 const apiCache = require('../lib/cache.js');
 const accounting = require('../lib/accounting.js')
+const perfanalyser= require('../lib/performenceanalyser.js');
+const output = require('../lib/outputTable.js');
+const utils = require('../lib/utils.js');
 const debug = require('debug')('iotbi.route.api');
 
 const PARAM_APPKEY	=	'appKey';
@@ -72,7 +75,7 @@ function apiAccounting(req,res,next)
    var lUnderLimit=accounting.recAccess(lAppKey,lUrl,lFiwareService,lRemoteIP,lCurrTime);
    if(!lUnderLimit)
    {
-       res.status(401).send('The daily limit was exceded!');
+       res.status(401).send('The daily limit for '+lFiwareService+' was exceded!');
        return;
    }
    next();
@@ -82,6 +85,8 @@ function apiReqCounter(req,res,next)
    var lCurrTime = new Date().getTime();
    gReqCount++;
    debug('Request ID:'+gReqCount);
+   req.iotbi_reqId=gReqCount;
+   req.iotbi_reqStarted=lCurrTime;
    res.locals.iotbi_reqId=gReqCount;
    res.locals.iotbi_reqStarted=lCurrTime;
 
@@ -94,16 +99,34 @@ function apiReqCounter(req,res,next)
 function apiCheckAccessFiwareService(req,res,next)
 {
     var lFiwareService = req.params.fiwareService;
+    var lFiwareServices=[];
     var lAppKey=req.query[PARAM_APPKEY];
-    if(!configsys.allowScopeToKey(lAppKey,lFiwareService))
+    if("*"==lFiwareService)
+    {
+       lFiwareServices=configsys.allowedFiwareServicesToKey(lAppKey);
+       utils.setRequestAllowedFiwareServices(res,lFiwareServices);
+       if(lFiwareServices.length==0)
+       {
+          debug('Your account does not have access to any fiware service :: appKey='+lAppKey+' FiwareService='+lFiwareService);
+          res.status(401).send('Your account does not have access to any service');
+       }
+       else
+       {
+          debug('Allowed services '+JSON.stringify(res.locals.iotbi_AllowedServices));
+          next();
+       }
+    }
+    else if(!configsys.allowScopeToKey(lAppKey,lFiwareService))
     {
          debug('Your account does not have access to this fiware service :: appKey='+lAppKey+' FiwareService='+lFiwareService);
          res.status(401).send('Your account does not have access to this fiware service');
     }
     else
     {
+        lFiwareServices=[lFiwareService];
+        utils.setRequestAllowedFiwareServices(res,lFiwareServices);
+        debug('Allowed services '+JSON.stringify(res.locals.iotbi_AllowedServices));        
         next();
-        debug('Check Access::Waiting for API...');
     }
 }
 function apiCheckAccessSystem(req,res,next)
@@ -143,17 +166,46 @@ function apiSelector(req,res,next)
    }
    debug('API Selector::Wait API...');
 }
-
+/**
+ * Final step for sending data: a table or error
+ */
+function apiSend(req,res,next)
+{
+   let lTable=res.locals.outputTable;
+   let lFormat=res.locals.outputFormat;
+   let lEntityType=res.entityType;
+   let lErrorCode=res.locals.errorCode;
+   let lErrorMessage=res.locals.errorMessage;
+   if(lTable!=undefined)
+   {
+      output.sendTable(res,lTable,lFormat,lEntityType);
+   }
+   else if(lErrorCode!=undefined)
+   {
+      output.sendError(res,lErrorCode,lErrorMessage);
+   }
+   else
+   {
+      console.log(JSON.stringify(res.locals,null,2));
+      output.sendError(res,500,'Unknown error');
+   }
+   
+}
 //V0
 router.get('/v0/orion/:fiwareService/:entityType',[apiReqCounter,validateToken,apiCheckAccessFiwareService,apiAccounting,apiOrion.service]);
 router.get('/v0/orion/:fiwareService/:entityType/:entityId',[apiReqCounter,validateToken,apiCheckAccessFiwareService,apiAccounting,apiOrion.service]);
 router.get('/v0/ql/:fiwareService/:entityType',[apiReqCounter,validateToken,apiCheckAccessFiwareService,apiAccounting,apiTemporal.service]);
 router.get('/v0/ql/:fiwareService/:entityType/:entityId',[apiReqCounter,validateToken,apiCheckAccessFiwareService,apiAccounting,apiTemporal.service]);
 //V1 
-router.get('/v1/system/cache/contexts',               [apiReqCounter,validateToken,apiCheckAccessSystem,apiAccounting,apiSystem.serviceCacheContexts]);
-router.get('/v1/system/cache/schemas',                [apiReqCounter,validateToken,apiCheckAccessSystem,apiAccounting,apiSystem.serviceCacheSchemas]);
-router.get('/v1/system/accounting',                   [apiReqCounter,validateToken,apiCheckAccessSystem,apiAccounting,apiSystem.serviceAccountingAccess]);
-router.get('/v1/:fiwareService/:entityType',          [apiReqCounter,validateToken,apiCheckAccessFiwareService,apiAccounting,apiCache.doCacheAPI,apiSelector]);
-router.get('/v1/:fiwareService/:entityType/:entityId',[apiReqCounter,validateToken,apiCheckAccessFiwareService,apiAccounting,apiCache.doCacheAPI,apiSelector]);
+router.get('/v1/system/cache/contexts',                 [apiReqCounter,validateToken,apiCheckAccessSystem,apiAccounting,apiSystem.serviceCacheContexts]);
+router.get('/v1/system/cache/schemas',                  [apiReqCounter,validateToken,apiCheckAccessSystem,apiAccounting,apiSystem.serviceCacheSchemas]);
+router.get('/v1/system/accounting',                     [apiReqCounter,validateToken,apiCheckAccessSystem,apiAccounting,apiSystem.serviceAccountingAccess]);
+router.get('/v1/system/performance/request/:requestId', [apiReqCounter,validateToken,apiCheckAccessSystem,apiAccounting,apiSystem.servicePerformanceRequestMetrics]);
+router.get('/v1/system/performance/requests',           [apiReqCounter,validateToken,apiCheckAccessSystem,apiAccounting,apiSystem.servicePerformanceRequestMetrics]);
+router.get('/v1/system/performance/state',              [apiReqCounter,validateToken,apiCheckAccessSystem,apiAccounting,apiSystem.servicePerformanceSystemMetrics]);
+router.get('/v1/system/performance/startTracking',      [apiReqCounter,validateToken,apiCheckAccessSystem,apiAccounting,apiSystem.servicePerformanceStartTrackingMetrics]);
+router.get('/v1/system/performance/stopTracking',       [apiReqCounter,validateToken,apiCheckAccessSystem,apiAccounting,apiSystem.servicePerformanceStopTrackingMetrics]);
+router.get('/v1/:fiwareService/:entityType',            [perfanalyser.hookStartRequest,apiReqCounter,validateToken,apiCheckAccessFiwareService,apiAccounting,apiCache.doCacheAPI,apiSelector,perfanalyser.hookEndRequest,apiSend]);
+router.get('/v1/:fiwareService/:entityType/:entityId',  [perfanalyser.hookStartRequest,apiReqCounter,validateToken,apiCheckAccessFiwareService,apiAccounting,apiCache.doCacheAPI,apiSelector,perfanalyser.hookEndRequest,apiSend]);
 
 module.exports = router;
