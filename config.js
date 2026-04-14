@@ -24,8 +24,8 @@ config.security.appKeys['estagio']={
 config.security.appKeys['benchmark']={
                                     name:'Benchmark user',
                                     limitDay:1000000,
-//'stellio_test_1','scorpio_test_1','orionld_test_1']
-                                    scopes:['scorpio_test_1'],
+                                    scopes:['stellio_test_1','scorpio_test_1','orionld_test_1'],
+                                    _scopes:['scorpio_test_1'],
                                     allowAPI:true,
                                     allowHadoop:false,
                                     allowMcp:false,
