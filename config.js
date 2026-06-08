@@ -49,6 +49,26 @@ config.security.appKeys['rhp']={
                                     allowMcp:true,
                                     hiddenEntities:{'portodigital':['Alert']}
                                };
+config.security.appKeys['mcp_user']={
+                                    name:'RHP user',
+                                    limitDay:1000,
+                                    scopes:['stellio_test_1','portodigital','madrid','system'],
+                                    allowAPI:true,
+                                    allowHadoop:true,
+                                    allowMcp:true,
+                                    hiddenEntities:{'portodigital':['Alert']}
+                               };
+config.security.appKeys['gil']={
+                                    name:'Gil Santos',
+                                    limitDay:1000,
+                                    scopes:['scorpio_test_industry','system'],
+                                    allowAPI:true,
+                                    allowHadoop:true,
+                                    allowMcp:true,
+                                    hiddenEntities:{'portodigital':['Alert']}
+                               };
+
+
 //60000 (60s)
 /**********************************************************
  * Cache
@@ -87,6 +107,15 @@ config.broker.servers.scorpio_test_1={
                   jsonldContext:'http://context/json-context.jsonld',
                   schemaCommon:['https://smart-data-models.github.io/data-models/common-schema.json'],
                 };
+config.broker.servers.scorpio_test_industry={
+                  tenant:'urn:ngsi-ld:test_industry',
+                  host:'scorpio-broker',port:'9090',https:false,
+                  ngsi:'ldv1',broker:'Scorpio',
+                  ngsildContext:'http://context/ngsi-context.jsonld',
+                  jsonldContext:'http://context/json-context.jsonld',
+                  schemaCommon:['https://smart-data-models.github.io/data-models/common-schema.json'],
+                };
+
 config.broker.servers.stellio_default={
                   tenant:'urn:ngsi-ld:tenant:default',
                   host:'stellio-api-gateway',port:'8080',https:false,
@@ -161,19 +190,9 @@ config.broker.servers.portodigital={
 config.quantumleap = {};
 config.quantumleap.servers= {};
 config.quantumleap.servers.owm_v1={host:'orion-quantumleap',port:'8668',https:false};
-config.quantumleap.servers.test_ld={host:'52.49.232.90',port:'8668',https:false};
+config.quantumleap.servers.test_ld={host:'orion-quantumleap',port:'8668',https:false};
 config.quantumleap.servers.portodigital={};
 config.quantumleap.servers.orionld_test_1={};
-//http://context/smart-data-models/dataModel.PointOfInterest/PointOfInterest/context.jsonld
-//https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld
-
-//http://context/smart-data-models/dataModel.Environment/context.jsonld
-//https://raw.githubusercontent.com/smart-data-models/dataModel.Environment/master/context.jsonld
-
-
-//http://context/smart-data-models/dataModel.Building/context.jsonld
-//https://raw.githubusercontent.com/smart-data-models/dataModel.Building/refs/heads/master/context.jsonld
-
 /**********************************************************
  * Entity types
  **********************************************************/
@@ -191,7 +210,6 @@ config.entityTypes.AirQualityObserved={
 config.entityTypes.Building={
                               description:'Information on a given Building',
                               urlSchema:['https://smart-data-models.github.io/dataModel.Building/Building/schema.json'],
-                              __urlContext:'http://context/ngsi-context.jsonld',
                               urlContext:'http://context/smart-data-models/dataModel.Building/context.jsonld'
                             }
 config.entityTypes.TemperatureSensor={
@@ -204,6 +222,33 @@ config.entityTypes.FillingLevelSensor={
                                          urlSchema:['http://context/smart-data-models/rhp/FillingLevelSensor.json','https://smart-data-models.github.io/dataModel.Device/Device/schema.json'],
                                          urlContext:'http://context/ngsi-context.jsonld'
                                       }
+
+config.entityTypes.Person={
+                              description:'Information on a given Person',
+                              urlSchema:['http://context/smart-data-models/dataModel.Organization/Person/schema.json'],
+                              urlContext:'http://context/smart-data-models/dataModel.Organization/context.jsonld'
+                            }
+config.entityTypes.Organization={
+                              description:'Information on a given Organization',
+                              urlSchema:['http://context/smart-data-models/dataModel.Organization/Organization/schema.json'],
+                              urlContext:'http://context/smart-data-models/dataModel.Organization/context.jsonld'
+                            }
+config.entityTypes.ManufacturingMachineOperation={
+                              description:'Information on a given Person',
+                              urlSchema:['http://context/smart-data-models/dataModel.ManufacturingMachine/ManufacturingMachineOperation/schema.json'],
+                              urlContext:'http://context/smart-data-models/dataModel.ManufacturingMachine/context.jsonld'
+                            }
+config.entityTypes.ManufacturingMachineModel={
+                              description:'Information on a given Manufacturing Machine Model',
+                              urlSchema:['http://context/smart-data-models/dataModel.ManufacturingMachine/ManufacturingMachineModel/schema.json'],
+                              urlContext:'http://context/smart-data-models/dataModel.ManufacturingMachine/context.jsonld'
+                            }
+config.entityTypes.ManufacturingMachine={
+                              description:'Information on a Manufacturing Machine',
+                              urlSchema:['http://context/smart-data-models/dataModel.ManufacturingMachine/ManufacturingMachine/schema.json'],
+                              urlContext:'http://context/smart-data-models/dataModel.ManufacturingMachine/context.jsonld'
+                            }
+
 /**********************************************************
  * Strategy for obtain similarity
  *  'fastFuzzy' - Based on fast-fuzzy

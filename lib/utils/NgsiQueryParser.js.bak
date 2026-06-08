@@ -27,11 +27,11 @@ module.exports = class NgsiQueryParser {
    * @param {string} expression - Expressão a ser analisada
    * @returns {Array} Array com nomes únicos dos parâmetros
    */
-  extrairParametrosExpressoesValores(expression) {
+  extrairParametros(expression) {
     try {
       const tokens = this.tokenize(expression);
       const ast = this.parseExpression(tokens);
-      return this.extrairPEVDaAST(ast);
+      return this.extrairParametrosDaAST(ast);
     } catch (error) {
       debug(error)
       return [];
@@ -43,12 +43,10 @@ module.exports = class NgsiQueryParser {
    * @param {object} ast - Árvore sintática
    * @returns {Array} Array com nomes únicos dos parâmetros
    */
-  extrairPEVDaAST(ast) {
+  extrairParametrosDaAST(ast) {
     const parametros = new Set();
-    const valores = new Set();
-    const expressoes = new Set();
-    this._percorrerAST(ast, parametros,expressoes,valores);
-    return [Array.from(parametros).sort(),Array.from(expressoes).sort(),Array.from(valores).sort()];
+    this._percorrerAST(ast, parametros);
+    return Array.from(parametros).sort();
   }
 
   /**
@@ -56,7 +54,7 @@ module.exports = class NgsiQueryParser {
    * @param {object} node - Nó da AST
    * @param {Set} parametros - Set para armazenar parâmetros únicos
    */
-  _percorrerAST(node, parametros,expressoes,valores) {
+  _percorrerAST(node, parametros) {
     if (!node) return;
 
     switch (node.type) {
@@ -64,14 +62,6 @@ module.exports = class NgsiQueryParser {
         // Verifica se é um nome de variável válido
         if (node.value && /^[a-zA-Z_]\w*$/.test(node.value)) {
           parametros.add(node.value);
-        }
-        else if (node.value && /[*+\-/]\w*$/.test(node.value)) 
-        {
-          expressoes.add(node.value);
-        }
-        else
-        {
-           valores.add(node.value);
         }
         break;
 
@@ -87,8 +77,8 @@ module.exports = class NgsiQueryParser {
         break;
 
       case 'expression':
-        this._percorrerAST(node.left, parametros,expressoes,valores);
-        this._percorrerAST(node.right, parametros,expressoes,valores);
+        this._percorrerAST(node.left, parametros);
+        this._percorrerAST(node.right, parametros);
         break;
     }
   }
@@ -132,20 +122,13 @@ module.exports = class NgsiQueryParser {
     try {
       const tokens = this.tokenize(expression);
       const ast = this.parseExpression(tokens);
-      const pev = this.extrairPEVDaAST(ast);
-      const parametros=pev[0];
-      const expressoes=pev[1];
-      const valores=pev[2];
-
+      const parametros = this.extrairParametrosDaAST(ast);
+      
       return {
         valida: true,
         ast: ast,
         parametros: parametros,
         parametrosCount: parametros.length,
-        expressoes: expressoes,
-        expressoesCount: expressoes.length,
-        valores: valores,
-        valoresCount: valores.length,
         expressao: expression
       };
     } catch (error) {
@@ -163,17 +146,12 @@ module.exports = class NgsiQueryParser {
     try {
       const tokens = this.tokenize(expression);
       const ast = this.parseExpression(tokens);
-      const pev = this.extrairPEVDaAST(ast);
-      const parametros=pev[0];
-      const expressoes=pev[1];
-      const valores=pev[2];
-
+      const parametros = this.extrairParametrosDaAST(ast);
+      
       return {
         valid: true,
         ast: ast,
         parameters: parametros,
-        expressoes: expressoes,
-        valores: valores,
         expression: expression
       };
     } catch (error) {
@@ -181,8 +159,6 @@ module.exports = class NgsiQueryParser {
         valid: false,
         error: error.message,
         parameters: [],
-        expressoes: [],
-        valores: [],
         expression: expression
       };
     }

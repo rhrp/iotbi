@@ -30,7 +30,7 @@ function getAllowedServices()
              lServices.push(lAliasArray[i]);
          }
      }
-     debug('User: '+lUser+' Allowed Services: '+JSON.stringify(lServices));
+     debug('MCP User: '+lUser+' Allowed Services: '+JSON.stringify(lServices));
      return lServices
 }
 
@@ -158,11 +158,11 @@ function serviceMcp(req,res,next)
     });
     server.connect(transport).then(() => {
            debug('MCP Server connection is UP');
-           debug('appKey='+getRequestAuthAppKey(req)+'  Method: '+req.body.method );
+           debug('MCP Server appKey='+getRequestAuthAppKey(req)+'  Method: '+req.body.method );
            transport.handleRequest(req, res, req.body);
         })
         .catch((err) => {
-           debug(err);
+           debug('MCP Server Error: '+err);
            sendError(res,500,err)
         });
 };
@@ -180,8 +180,9 @@ function serviceDebug(req,res,next)
 
 function serviceAuth(req,res,next)
 {
-   var lHeaderAuthorization=req.headers['authorization'];
-   var lToken=lHeaderAuthorization!=undefined?lHeaderAuthorization.split(' ')[1]:undefined;
+   let lHeaderAuthorization=req.headers['authorization'];
+   let lToken=lHeaderAuthorization!=undefined?lHeaderAuthorization.split(' ')[1]:undefined;
+   let lTag='serviceAuth';
    if(lToken==undefined)
    {
        sendError(res,401,'Unauthorized');
@@ -191,14 +192,14 @@ function serviceAuth(req,res,next)
    if(lAppKey==undefined || lAppKey!=configsys.getMcpAppKey())
    {
        //TODO: 403?
-       debug('lAppKey='+lAppKey+'    mcpAppKey='+configsys.getMcpAppKey());
+       debug(lTag+'::lAppKey='+lAppKey+'    mcpAppKey='+configsys.getMcpAppKey());
        sendError(res,403,'Unauthorized');
        return;
    }
 
    if(!configsys.allowMcpToUser(lAppKey))
    {
-      debug('Your account does not have permissions for using MCP :: Mcp User='+lAppKey);
+      debug(lTag+'::Your account does not have permissions for using MCP :: Mcp User='+lAppKey);
       sendError(res,403,'Your account does not have permissions for using this MCP server');
       return;
    }
@@ -206,7 +207,7 @@ function serviceAuth(req,res,next)
    saveAuthData(req,lAppKey)
    //debug('appKey: '+lAppKey);
    next();
-   debug('Request Auth::Waiting for MCP Server...');
+   debug(lTag+'::Request Auth::Waiting for MCP Server...');
 }
 
 function saveAuthData(req,appKey)
