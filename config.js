@@ -52,7 +52,9 @@ config.security.appKeys['rhp']={
 config.security.appKeys['mcp_user']={
                                     name:'RHP user',
                                     limitDay:1000,
-                                    scopes:['stellio_test_1','portodigital','madrid','system'],
+                                    _scopes:['owm_v1','stellio_owm_ld','stellio_test_1','portodigital','madrid','porto','scorpio_test_industry','system'],
+                                    __scopes:['stellio_test_1','portodigital','madrid','system'],
+                                    scopes:['industry01','portodigital','madrid','system'],
                                     allowAPI:true,
                                     allowHadoop:true,
                                     allowMcp:true,
@@ -61,7 +63,7 @@ config.security.appKeys['mcp_user']={
 config.security.appKeys['gil']={
                                     name:'Gil Santos',
                                     limitDay:1000,
-                                    scopes:['scorpio_test_industry','system'],
+                                    scopes:['industry01','scorpio_test_industry','system'],
                                     allowAPI:true,
                                     allowHadoop:true,
                                     allowMcp:true,
@@ -160,7 +162,14 @@ config.broker.servers.porto={
                                 'https://raw.githubusercontent.com/smart-data-models/dataModel.Environment/master/Environment-schema.json']
 
                 };
-
+config.broker.servers.industry01={
+                  tenant:'urn:ngsi-ld:tenant:industry01',
+                  host:'stellio-api-gateway',port:'8080',https:false,
+                  ngsi:'ldv1',broker:'Stellio',
+                  ngsildContext:'http://context/ngsi-context.jsonld',
+                  jsonldContext:'http://context/json-context.jsonld',
+                  schemaCommon:['https://smart-data-models.github.io/data-models/common-schema.json']
+                };
 config.broker.servers.stellio_test_ld={
                   tenant:'urn:ngsi-ld:tenant:test_ld',
                   host:'stellio-api-gateway',port:'8080',https:false,
@@ -247,6 +256,16 @@ config.entityTypes.ManufacturingMachine={
                               description:'Information on a Manufacturing Machine',
                               urlSchema:['http://context/smart-data-models/dataModel.ManufacturingMachine/ManufacturingMachine/schema.json'],
                               urlContext:'http://context/smart-data-models/dataModel.ManufacturingMachine/context.jsonld'
+                            }
+config.entityTypes.ManufacturingMachineState={
+                              description:'Information on a Manufacturing Machine State',
+                              urlSchema:['http://context/smart-data-models/dataModel.ManufacturingMachineState/ManufacturingMachineState/schema.json'],
+                              urlContext:'http://context/smart-data-models/dataModel.ManufacturingMachineState/context.jsonld'
+                            }
+config.entityTypes.ManufacturingController={
+                              description:'Information on a Manufacturing Controller',
+                              urlSchema:['http://context/smart-data-models/dataModel.ManufacturingMachineState/ManufacturingController/schema.json'],
+                              urlContext:'http://context/smart-data-models/dataModel.ManufacturingMachineState/context.jsonld'
                             }
 
 /**********************************************************

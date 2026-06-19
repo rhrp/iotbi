@@ -1,0 +1,1781 @@
+[
+  {
+    "id": "Q001",
+    "type": "simple",
+    "category": "Location & Coordinates",
+    "question": "What are the GPS coordinates of the Museo del Prado?",
+    "ground_truth": "Latitude: 40.41378, Longitude: -3.692127",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5"
+    ]
+  },
+  {
+    "id": "Q002",
+    "question": "What is the price range for 'Museo del Prado' in Madrid?",
+    "ground_truth": "15€",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5"
+    ]
+  },
+  {
+    "id": "Q003",
+    "type": "simple",
+    "category": "Location & Coordinates",
+    "question": "What are the GPS coordinates of WOW - Pip in Gaia, near city of Porto?",
+    "ground_truth": "Lat.: 41.13467044, Longitude: -8.61518296",
+    "brokers": [
+      "portodigital"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:6172ede29296f50001f4a674"
+    ]
+  },
+  {
+    "id": "Q004",
+    "question": "What is the price range for 'Museo Lázaro Galdiano' in Madrid?",
+    "ground_truth": "7€",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:38"
+    ]
+  },
+  {
+    "id": "Q005",
+    "type": "simple",
+    "category": "Location & Coordinates",
+    "question": "What is the longitude of Plaza de España in Madrid?",
+    "ground_truth": "-3.712238",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:45"
+    ]
+  },
+  {
+    "id": "Q006",
+    "type": "simple",
+    "category": "Location & Coordinates",
+    "question": "What are the coordinates of Praia da Luz located in city of Porto?",
+    "ground_truth": "The coordinates of Praia da Luz located in the city of Porto are:\nLatitude: 41.15333745\nLongitude: -8.6791688",
+    "brokers": [
+      "portodigital"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b51f979e000019b65e4"
+      ]
+  },
+  {
+    "id": "Q007",
+    "type": "simple",
+    "category": "Location & Coordinates",
+    "question": "What are the coordinates of Hospital Santa Cristina in Madrid?",
+    "ground_truth": "Latitude: 40.42656, Longitude: -3.706879",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:4"
+    ]
+  },
+  {
+    "id": "Q008",
+    "type": "simple",
+    "category": "Location & Coordinates",
+    "question": "What are the GPS coordinates of Gabinete do Munícipe, in the city of Porto?",
+    "ground_truth": "The GPS coordinates of Gabinete do Munícipe, in the city of Porto, are:\nLatitude: 41.14935071\nLongitude: -8.61020208",
+    "brokers": [
+      "portodigital"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4ef979e00001fe4805"
+    ]
+  },
+  {
+    "id": "Q009",
+    "question": "What is the capacity of 'Parque de la Cuña Verde de Vicálvaro' in Madrid?",
+    "ground_truth": "578",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:595"
+    ]
+  },
+  {
+    "id": "Q010",
+    "type": "simple",
+    "category": "Location & Coordinates",
+    "question": "What are the geographical coordinates of the parking lot located on Rua do Visconde Setúbal, in Porto, Portugal?",
+    "ground_truth": "Latitude: 41.16343859 Longitude: -8.60523462",
+    "brokers": [
+      "portodigital"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4df979e000019f80cd"
+    ]
+  },
+  {
+    "id": "Q011",
+    "question": "What is the occupancy of 'Hospital Santa Cristina' in Madrid?",
+    "ground_truth": "1212",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:4"
+    ]
+  },
+  {
+    "id": "Q012",
+    "question": "What is the relevance score of 'Hospital Santa Cristina' in Madrid?",
+    "ground_truth": "3",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:4"
+    ]
+  },
+  {
+    "id": "Q013",
+    "question": "What is the occupancy of 'Karaoke Box' in Madrid?",
+    "ground_truth": "210",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:757"
+    ]
+  },
+  {
+    "id": "Q014",
+    "question": "What is the street address of 'Silva Pereira Suc. Pharmacy' in Porto?",
+    "ground_truth": "Rua Costa Cabral, 293",
+    "brokers": [
+      "portodigital"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98de"
+    ]
+  },
+  {
+    "id": "Q015",
+    "question": "What is the street address of 'Serpa Pinto Pharmacy' in Porto?",
+    "ground_truth": "Rua de Serpa Pinto, 645",
+    "brokers": [
+      "portodigital"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98dc"
+    ]
+  },
+  {
+    "id": "Q016",
+    "type": "simple",
+    "category": "Location & Coordinates",
+    "question": "What are the coordinates of a place named Poças, with more than 100 years of existence and is a Portuguese family business, in Porto, Portugal?",
+    "ground_truth": "Latitude: 41.1276, Longitude: -8.6191",
+    "brokers": [
+      "portodigital"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b59f979e000011eba93"
+    ]
+  },
+  {
+    "id": "Q017",
+    "question": "What is the phone number of 'Soeiro Pharmacy' in Porto?",
+    "ground_truth": "+351 225371370",
+    "brokers": [
+      "portodigital"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98df"
+    ]
+  },
+  {
+    "id": "Q018",
+    "question": "How many total points of interest are listed in Spain?",
+    "ground_truth": "1088",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": []
+  },
+  {
+    "id": "Q019",
+    "question": "What is the price range of 'Hostal El Estudio' in Madrid?",
+    "ground_truth": "30€",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:22"
+    ]
+  },
+  {
+    "id": "Q020",
+    "question": "Which are the pharmacies in Rua Santos Posada, Porto?",
+    "ground_truth": "The pharmacy in Rua Santos Pousada, Porto is:  Soeiro Pharmacy, Rua Santos Pousada, 71, Porto",
+    "brokers": [
+      "portodigital"
+    ],
+    "ids": []
+  },
+  {
+  "id": "Q021",
+  "type": "simple",
+  "category": "Location & Coordinates",
+  "question": "I'm located in Farmacia Soeiro, in the city of Porto, but they are closed due to vacation, where is the closest farmacy near me?",
+  "ground_truth": "The closest pharmacy to Farmacia Soeiro (Rua Santos Pousada, 71) is Bonfim Pharmacy (Rua do Bonfim, 73). The distance is approximately 700 meters.",
+  "brokers": [
+    "portodigital"
+  ],
+  "entity_ids": [
+    "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98e3"
+  ]
+  },
+  {
+    "id": "Q022",
+    "question": "In Porto, what is the address of 'Soeiro Pharmacy'?",
+    "ground_truth": "Rua Santos Pousada, 71",
+    "brokers": [
+      "portodigital"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98df"
+    ]
+  },
+  {
+    "id": "Q023",
+    "question": "What is the capacity of Hospital Santa Cristina in Madrid?",
+    "ground_truth": "1679",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:4"
+    ]
+  },
+  {
+    "id": "Q024",
+    "question": "What is the occupancy rate (occupancy/capacity) of Hospital Santa Cristina in Madrid?",
+    "ground_truth": "1212/1679 = 72.19%",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:4"
+    ]
+  },
+  {
+    "id": "Q025",
+    "question": "How many points of interest in Madrid have a price range of 5€?",
+    "ground_truth": "11",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": []
+  },
+  {
+    "id": "Q026",
+    "question": "In the entire city of Madrid, which are the places that are occupied by a single person?",
+    "ground_truth": "The places in the city of Madrid that are occupied by a single person are:\n- Barrio de Tetúan (40.4512, -3.701238)\n- Mirador del Parque de la Vaguada (40.471377, -3.715312)\n- Mercado de la Cebada (40.413983, -3.707115)",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": []
+  },
+  {
+    "id": "Q027",
+    "question": "What is the admission price to Real Academia de Bellas Artes de San Fernando in Madrid?",
+    "ground_truth": "8€",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:16"
+    ]
+  },
+  {
+    "id": "Q028",
+    "question": "What is the email address of Serpa Pinto Pharmacy in the city of Porto?",
+    "ground_truth": "farmacia@serpapinto.com",
+    "brokers": [
+      "portodigital"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98dc"
+    ]
+  },
+  {
+    "id": "Q029",
+    "question": "What is the phone number of Serpa Pinto Pharmacy in the city of Porto?",
+    "ground_truth": "+351 228300558",
+    "brokers": [
+      "portodigital"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98dc"
+    ]
+  },
+  {
+    "id": "Q030",
+    "question": "What is the street address of Soeiro Pharmacy in Porto?",
+    "ground_truth": "Rua Santos Pousada, 71",
+    "brokers": [
+      "portodigital"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98df"
+    ]
+  },
+  {
+    "id": "Q031",
+    "question": "What is the phone number of Soeiro Pharmacy in Porto?",
+    "ground_truth": "+351 225371370",
+    "brokers": [
+      "portodigital"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98df"
+    ]
+  },
+  {
+    "id": "Q032",
+    "type": "simple",
+    "category": "Contacts",
+    "question": "Which is the phone number of Bonfim Pharmacy in Porto, Portugal?",
+    "ground_truth": "The phone number of Bonfim Pharmacy in Porto, Portugal is +351 225372444.",
+    "brokers": [
+      "portodigital"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98e3"
+    ]
+  },
+  {
+    "id": "Q033",
+    "question": "What is the occupancy rate of Discoteca Cadena in Madrid?",
+    "ground_truth": "348/732 = 47.54%",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:17"
+    ]
+  },
+  {
+    "id": "Q034",
+    "question": "Which Madrid museum has a higher admission price: Museo del Prado or Museo de América?",
+    "ground_truth": "Museo del Prado (15€) is more expensive than Museo de América (3€). Museo del Prado has the higher price.",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5",
+      "urn:ngsi-ld:PointOfInterest:8"
+    ]
+  },
+  {
+    "id": "Q035",
+    "question": "Is there anywhere to do karaoke in Madrid?",
+    "ground_truth": "Yes, in the Karaoke Box",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": ["urn:ngsi-ld:PointOfInterest:757"]
+  },
+  {
+    "id": "Q036",
+    "question": "How many points of interest in Madrid have a price range of 15€ or higher?",
+    "ground_truth": "23",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": []
+  },
+  {
+    "id": "Q037",
+    "question": "What is the price range of Hostal El Pilar in Madrid and what is its capacity?",
+    "ground_truth": "Price range: 40€, Capacity: 1401",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:164"
+    ]
+  },
+  {
+    "id": "Q038",
+    "type": "simple",
+    "category": "Capacity & Occupancy",
+    "question": "What is the capacity of Hospital Santa Cristina in Madrid?",
+    "ground_truth": "1679",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:4"
+    ]
+  },
+  {
+    "id": "Q039",
+    "type": "simple",
+    "category": "Capacity & Occupancy",
+    "question": "What is the current occupancy of Hospital Santa Cristina in Madrid?",
+    "ground_truth": "1212",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:4"
+    ]
+  },
+  {
+    "id": "Q040",
+    "type": "simple",
+    "category": "Capacity & Occupancy",
+    "question": "What is the capacity of Hospital Clinico San Carlos in Madrid?",
+    "ground_truth": "1679",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:23"
+    ]
+  },
+  {
+    "id": "Q041",
+    "type": "simple",
+    "category": "Capacity & Occupancy",
+    "question": "What is the current occupancy of Point of Interest named Hospital Clinico San Carlos in the city of Madrid?",
+    "ground_truth": "1067",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:23"
+    ]
+  },
+  {
+    "id": "Q042",
+    "type": "simple",
+    "category": "Capacity & Occupancy",
+    "question": "What is the capacity of the Museo del Prado?",
+    "ground_truth": "1171",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5"
+    ]
+  },
+  {
+    "id": "Q043",
+    "type": "simple",
+    "category": "Capacity & Occupancy",
+    "question": "What is the current occupancy of the Museo del Prado?",
+    "ground_truth": "870",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5"
+    ]
+  },
+  {
+    "id": "Q044",
+    "type": "simple",
+    "category": "Capacity & Occupancy",
+    "question": "What is the capacity of Churreria Valor in Madrid?",
+    "ground_truth": "36",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:43"
+    ]
+  },
+  {
+    "id": "Q045",
+    "type": "simple",
+    "category": "Capacity & Occupancy",
+    "question": "What is the current occupancy of Churreria Valor in Madrid?",
+    "ground_truth": "35",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:43"
+    ]
+  },
+  {
+    "id": "Q046",
+    "type": "simple",
+    "category": "Capacity & Occupancy",
+    "question": "What is the capacity of Biblioteca Municipal Luis Rosales in Madrid?",
+    "ground_truth": "1662",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:68"
+    ]
+  },
+  {
+    "id": "Q047",
+    "type": "simple",
+    "category": "Capacity & Occupancy",
+    "question": "What is the current occupancy of Biblioteca Municipal Luis Rosales in Madrid?",
+    "ground_truth": "1410",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:68"
+    ]
+  },
+  {
+    "id": "Q048",
+    "type": "simple",
+    "category": "Capacity & Occupancy",
+    "question": "What is the capacity of Museo Lazaro Galdiano in Madrid?",
+    "ground_truth": "1171",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:38"
+    ]
+  },
+  {
+    "id": "Q049",
+    "type": "simple",
+    "category": "Capacity & Occupancy",
+    "question": "What is the current occupancy of Museo Lazaro Galdiano in Madrid?",
+    "ground_truth": "1057",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:38"
+    ]
+  },
+  {
+    "id": "Q050",
+    "type": "simple",
+    "category": "Capacity & Occupancy",
+    "question": "What is the capacity of Cines Callao in Madrid?",
+    "ground_truth": "1968",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:105"
+    ]
+  },
+  {
+    "id": "Q051",
+    "type": "simple",
+    "category": "Price & Admission",
+    "question": "What is the admission price for the Museo del Prado?",
+    "ground_truth": "15 EUR",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5"
+    ]
+  },
+  {
+    "id": "Q052",
+    "type": "simple",
+    "category": "Price & Admission",
+    "question": "What is the admission price for the Museo de America in Madrid?",
+    "ground_truth": "3 EUR",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:8"
+    ]
+  },
+  {
+    "id": "Q053",
+    "type": "simple",
+    "category": "Price & Admission",
+    "question": "What is the admission price for CaixaForum Madrid?",
+    "ground_truth": "6 EUR",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:89"
+    ]
+  },
+  {
+    "id": "Q054",
+    "type": "simple",
+    "category": "Price & Admission",
+    "question": "What is the admission price for the Real Basilica de San Francisco el Grande in Madrid?",
+    "ground_truth": "3 EUR",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:57"
+    ]
+  },
+  {
+    "id": "Q055",
+    "type": "simple",
+    "category": "Price & Admission",
+    "question": "What is the admission price for Museo Lazaro Galdiano in Madrid?",
+    "ground_truth": "7 EUR",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:38"
+    ]
+  },
+  {
+    "id": "Q056",
+    "type": "simple",
+    "category": "Price & Admission",
+    "question": "What is the admission price for Real Academia de Bellas Artes de San Fernando, in Madrid?",
+    "ground_truth": "8 EUR",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:16"
+    ]
+  },
+  {
+    "id": "Q057",
+    "type": "simple",
+    "category": "Price & Admission",
+    "question": "What is the price range for Palacio de Linares (Casa de America) in Madrid?",
+    "ground_truth": "10 EUR",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:60"
+    ]
+  },
+  {
+    "id": "Q058",
+    "type": "simple",
+    "category": "Price & Admission",
+    "question": "What is the price range for Hostal El Estudio in Madrid?",
+    "ground_truth": "30 EUR",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:22"
+    ]
+  },
+  {
+    "id": "Q059",
+    "type": "simple",
+    "category": "Price & Admission",
+    "question": "What is the admission price for Museo del Jamon in Madrid?",
+    "ground_truth": "5 EUR",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:77"
+    ]
+  },
+  {
+    "id": "Q060",
+    "type": "simple",
+    "category": "Price & Admission",
+    "question": "Is the Palacio de Cristal in Madrid free to enter?",
+    "ground_truth": "Yes, priceRange is 0 EUR",
+    "brokers": [
+      "madrid"
+    ],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:66"
+    ]
+  },
+  {
+    "id": "Q061",
+    "question": "Among hostals listed in Madrid, which one has the highest price range?",
+    "ground_truth": "The hostals with the highest price range are Hostal Pizarro, Hostal Las Murallas, and Hostal Vázquez de Mella, all listed at 30–60€. Among fixed-price hostals, Hostal El Pilar and Hostal Persal are the most expensive at 40€",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:164"
+    ]
+  },
+  {
+    "id": "Q062",
+    "question": "Among hotels listed in Madrid, which one has the highest price range?",
+    "ground_truth": "All Madrid hotels have a priceRange of 0€ — meaning that field is not populated for hotels. Unlike hostals, no price data is available for hotels in this dataset.",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:164"
+    ]
+  },
+  {
+    "id": "Q063",
+    "question": "Which are the POIs located in the Edificio Aviz, in the city of Porto?.",
+    "ground_truth": "The POI located in the Edificio Aviz, in the city of Porto, is:\n- Chá Clube (Address: Edifício Aviz – Avenida da Boavista, 3477 Loja 19, Porto, 4100-139)\nThis is the only POI found with an address in Edificio Aviz within the specified area.",
+    "brokers": [
+      "portodigital"
+    ],
+    "ids": []
+  },
+  {
+    "id": "Q064",
+    "question": "In Madrid, which are the most relevant (relevance=1) points of interest are operating at more than 90% occupancy (occupancy/capacity > 0.9)?",
+    "ground_truth": "Six POIs: 1. Churrería Valor, 2. Iglesia de Santa María la Real de La Almudena, 3. Juzgados de Plaza de Castilla, 4. Hospital Universitario Gregorio Marañón, 5. Restaurante StreetXO and 6. Atocha",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": []
+  },
+  {
+    "id": "Q065",
+    "question": "For Hospital Santa Cristina in Madrid, what is its occupancy rate?",
+    "ground_truth": "Occupancy rate: 1212/1679 = 72.19%",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:4"
+    ]
+  },
+  {
+    "id": "Q066",
+    "question": "What is the price range and occupancy of Teatro Español in Madrid?",
+    "ground_truth": "Price range: 5€, Occupancy: 13",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:110"
+    ]
+  },
+  {
+    "id": "Q067",
+    "question": "What is the street address and phone number of Melo Taveira Pharmacy in Porto?",
+    "ground_truth": "Address: Rua Alcaide Faria, 77, Phone: +351 226187006",
+    "brokers": [
+      "portodigital"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98e0"
+    ]
+  },
+  {
+    "id": "Q068",
+    "question": "For Karaoke Box in Madrid, what is the capacity, occupancy, relevance, and price range?",
+    "ground_truth": "Capacity: 444, Occupancy: 210, Relevance: 4, Price: 0€",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:757"
+    ]
+  },
+  {
+    "id": "Q069",
+    "question": "What is the capacity of 'Pastelería Delicias del Paladar' in Madrid?",
+    "ground_truth": "66",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:611"
+    ]
+  },
+  {
+    "id": "Q070",
+    "question": "What is the price range and capacity of Palacio de Linares in Madrid?",
+    "ground_truth": "Price: 10€, Capacity: 514",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:60"
+    ]
+  },
+  {
+    "id": "Q071",
+    "question": "Which pharmacy is on Rua Costa Cabral in Porto?",
+    "ground_truth": "Silva Pereira Suc. Pharmacy (address: Rua Costa Cabral, 293)",
+    "brokers": [
+      "portodigital"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98de"
+    ]
+  },
+  {
+    "id": "Q072",
+    "question": "What is the price range of Hotel Eurostars Madrid Tower in Madrid?",
+    "ground_truth": "0€",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:52"
+    ]
+  },
+  {
+    "id": "Q073",
+    "question": "Which are the most relevants (relevance<=2) Hotels within 100 meters of Librería La Casa del Libro in the city of Madrid?",
+    "ground_truth": "- Gran Hotel Inglés (Location: 40.418346, -3.705546, Relevance: 2)",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": ["urn:ngsi-ld:PointOfInterest:237","urn:ngsi-ld:PointOfInterest:835"]
+  },
+  {
+    "id": "Q074",
+    "question": "What is the fax number of Silva Pereira Suc. Pharmacy in Porto?",
+    "ground_truth": "+351 225519188",
+    "brokers": [
+      "portodigital"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98de"
+    ]
+  },
+  {
+    "id": "Q075",
+    "question": "What is the address of Casa do Infante (old Royal Custom House) in Porto?",
+    "ground_truth": "Rua da Alfândega, 10",
+    "brokers": [
+      "portodigital"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4ef979e00001fe4804"
+    ]
+  },
+  {
+    "id": "Q076",
+    "question": "What type of facility is the São Bento da Vitória Monastery in Porto used for currently?",
+    "ground_truth": "It houses theatrical performances managed by TNSJ (Teatro Nacional de São João).",
+    "brokers": [
+      "portodigital"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b50f979e0000196becd"
+    ]
+  },
+  {
+    "id": "Q077",
+    "question": "What is the admission price of the Museo del Prado in Madrid?",
+    "ground_truth": "15€",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5"
+    ]
+  },
+  {
+    "id": "Q078",
+    "question": "What is the name of the Egyptian temple that was rebuilt in Madrid?",
+    "ground_truth": "Templo de Debod",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:232"
+    ]
+  },
+  {
+    "id": "Q079",
+    "question": "In which year was the Palacio de Cristal built in Madrid?",
+    "ground_truth": "1887",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:66"
+    ]
+  },
+  {
+    "id": "Q080",
+    "question": "What is the Palacio de Linares currently used for in Madrid?",
+    "ground_truth": "It houses the Casa de América, a cultural centre promoting relations between Spain and Latin America.",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:60"
+    ]
+  },
+  {
+    "id": "Q081",
+    "question": "Which Madrid restaurant has been operating for more than 300 years and is famous for roast suckling pig?",
+    "ground_truth": "Restaurante Sobrino de Botín",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:246"
+    ]
+  },
+  {
+    "id": "Q082",
+    "question": "Where is the Estadio Vicente Calderón located and until when was it the home of Atlético de Madrid?",
+    "ground_truth": "Madrid; it was the home of Atlético de Madrid until 2017.",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:250"
+    ]
+  },
+  {
+    "id": "Q083",
+    "question": "What notable feature is inside Estación de Atocha in Madrid?",
+    "ground_truth": "A tropical garden inside the station",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:296"
+    ]
+  },
+  {
+  "id": "Q084",
+  "type": "simple",
+  "category": "Location & Coordinates",
+  "question": "I am in the 'Bar La Gran Vía' in the city of Madrid. Which are the nearest (<700 meters) hospitals near me?",
+  "ground_truth": "The nearest hospital to Bar La Gran Vía are:\n1. Hospital Universitario Gregorio Marañón (40.418917, -3.701175)\n2. Hospital de la Princesa (40.422817, -3.705837)",
+  "brokers": [
+    "madrid"
+  ],
+  "entity_ids": [
+    "urn:ngsi-ld:PointOfInterest:4"
+  ]
+  },
+  {
+    "id": "Q085",
+    "question": "For what is the Museo del Ferrocarril in Madrid known and where is it located?",
+    "ground_truth": "It shows the history of railways in Spain with locomotives and wagons; located at the former Delicias station.",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:227"
+    ]
+  },
+  {
+    "id": "Q086",
+    "question": "Which city — Porto or Madrid — has a parking specifically associated with its concert hall, and what is the name of that concert hall?",
+    "ground_truth": "Porto; the Casa da Música Parking is associated with Casa da Música.",
+    "brokers": [
+      "portodigital",
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4df979e000019f809a"
+    ]
+  },
+  {
+    "id": "Q087",
+    "question": "Both Porto and Madrid have a Palácio/Palacio de Cristal. Which city's Palacio de Cristal is currently used for contemporary art exhibitions?",
+    "ground_truth": "Madrid's Palacio de Cristal (in Parque del Retiro) is used for contemporary art exhibitions.",
+    "brokers": [
+      "portodigital",
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:66",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4df979e000019f8095"
+    ]
+  },
+  {
+    "id": "Q088",
+    "question": "What is the email of the parking associated with the Palácio de Cristal in Porto?",
+    "ground_truth": "parque.palacio@agoraporto.pt",
+    "brokers": [
+      "portodigital"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4df979e000019f8095"
+    ]
+  },
+  {
+  "id": "Q089",
+  "type": "simple",
+  "category": "Location & Facilities",
+  "question": "I am in 'Sequeira Lucas e Ventura', in the city of Porto, I need the closest swimming pool with a website contact available",
+  "ground_truth": "The closest pool with a website to Sequeira Lucas e Ventura is Piscinas de Campanhã. Website: https://www.fcporto.pt/pt/clube/instalacoes",
+  "brokers": [
+    "portodigital"
+  ],
+  "entity_ids": [
+    "urn:ngsi-ld:PointOfInterest:5cd04b4ef979e00001fe47fc"
+  ]
+  },
+  {
+    "id": "Q090",
+    "question": "Which city has the Barão de Fladgate restaurant and The Yeatman Gastronomic Restaurant both on the same street?",
+    "ground_truth": "Porto (Vila Nova de Gaia); both are on Rua do Choupelo, 250.",
+    "brokers": [
+      "portodigital"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b50f979e0000196bec2",
+      "urn:ngsi-ld:PointOfInterest:5cd04b52f979e000011cf7bd"
+    ]
+  },
+  {
+    "id": "Q091",
+    "question": "In Porto, the InterContinental hotel and Vitália Pharmacy share the same square. What is the name of that square?",
+    "ground_truth": "Praça da Liberdade",
+    "brokers": [
+      "portodigital"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b51f979e000019b65c3",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98f0"
+    ]
+  },
+  {
+    "id": "Q092",
+    "question": "Which cities — Porto or Madrid — have an Estadio / Estádio do Dragão association, and what sport club uses it?",
+    "ground_truth": "Porto; the Solinca Dragão gym is located at Estádio do Dragão, home of FC Porto.",
+    "brokers": [
+      "portodigital"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4ff979e00001f6f760"
+    ]
+  },
+  {
+    "id": "Q093",
+    "question": "In Madrid, which museum has a higher admission price: Museo Lázaro Galdiano or Museo Nacional de Ciencias Naturales?",
+    "ground_truth": "Both cost 7€, so they are equally priced.",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:38",
+      "urn:ngsi-ld:PointOfInterest:169"
+    ]
+  },
+  {
+    "id": "Q094",
+    "question": "What is the most expensive attraction admission fee found in the city of Madrid?",
+    "ground_truth": "Restaurante StreetXO (60-80€)",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:170"
+    ]
+  },
+  {
+    "id": "Q095",
+    "question": "Which Madrid museum is located inside the former Delicias train station?",
+    "ground_truth": "Museo del Ferrocarril",
+    "brokers": [
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:227"
+    ]
+  },
+  {
+    "id": "Q096",
+    "question": "What does the Alfândega do Porto building currently host beyond being a historic building?",
+    "ground_truth": "It serves as a congress centre (Centro de Congressos da Alfândega do Porto) and, in 1987, it was decided to house the future Museum of Transport and Communications.",
+    "brokers": [
+      "portodigital"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b50f979e0000196beb5"
+    ]
+  },
+  {
+    "id": "Q097",
+    "question": "List the cemeteries in the entire city of Porto have an email contact",
+    "ground_truth": "Six Cemeteries:\n1. Ramalde Cemetery - Email: sadm.secretaria@jf-ramalde.pt \n2. Prado do Repouso Cemetery - Email: cemiterio-pradorepouso@cm-porto.pt\n3. Agramonte Cemetery - Email: cemiterio-agramonte@cm-porto.pt \n4. Lapa Cemetery - Email: geral@irmandadedalapa.pt\n5. Paranhos Cemetery - Email: cemiterio@jfparanhos.pt \n6. Bonfim Cemetery - Email: geral@irmandadebonfim.pt",
+    "brokers": [
+      "portodigital"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98f5",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98f1",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98fc",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98f9",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98fa",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98f8"
+    ]
+  },
+  {
+    "id": "Q098",
+    "question": "Which Porto parking is operated by the Saba company (uses @saba.eu emails)?",
+    "ground_truth": "Praça Gomes Teixeira Parking, Praça Carlos Alberto Parking, Praça de Lisboa Parking, and Palácio da Justiça Parking are all operated by Saba.",
+    "brokers": [
+      "portodigital"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4df979e000019f80bd",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4df979e000019f80ba",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4df979e000019f80c1",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4df979e000019f80a6"
+    ]
+  },
+  {
+    "id": "Q099",
+    "question": "In Porto, what is the address of the English Factory (Feitoria Inglesa)?",
+    "ground_truth": "Rua do Infante D. Henrique, 8",
+    "brokers": [
+      "portodigital"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4ef979e00001fe4817"
+    ]
+  },
+  {
+    "id": "Q100",
+    "question": "Which city — Porto or Madrid — has a viewpoint offering views of the D. Fernando Wall (Muralha Fernandina)?",
+    "ground_truth": "Porto",
+    "brokers": [
+      "portodigital",
+      "madrid"
+    ],
+    "ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4df979e000019f80d4"
+    ]
+  },
+  {
+  "id": "Q101",
+  "type": "multi-hop",
+  "category": "Cross-service Comparison",
+  "question": "Which city, Porto or Madrid, has more Hospitals?",
+  "ground_truth": "Madrid has more hospitals. Madrid has 16 hospitals listed in the database (e.g., Hospital Santa Cristina, Hospital Clínico San Carlos, Hospital Universitario 12 de Octubre), while Porto has 5 hospitals listed (e.g., Hospital de Santo António, Hospital Universitário de São João, Hospital CUF Porto).",
+  "brokers": ["portodigital", "madrid"],
+  "entity_ids": [
+    "urn:ngsi-ld:PointOfInterest:4",
+    "urn:ngsi-ld:PointOfInterest:23",
+    "urn:ngsi-ld:PointOfInterest:258",
+    "urn:ngsi-ld:PointOfInterest:5cd04b4ef979e00001fe4822",
+    "urn:ngsi-ld:PointOfInterest:5cd04b4ef979e00001fe4806"
+  ]
+  },
+  {
+  "id": "Q102",
+  "type": "multi-hop",
+  "category": "Cross-service Comparison",
+  "question": "Are there Points of Interest category types present in both regions of Porto and Madrid?",
+  "ground_truth": "Yes. The 'Parking' category (type 418) is present in both cities. Porto has parking POIs such as 'Parque da Cidade - south entrance parking' and 'Porto Gran Plaza Parking'. Madrid has parking POIs such as 'Aeropuerto Adolfo Suárez Madrid-Barajas' (which includes parking facilities). Additionally, both cities have 'Pharmacy' establishments (Porto has category 80; Madrid has POIs with 'farmacia' in the description, such as 'Farmacia Figueroa Martínez').",
+  "brokers": ["portodigital", "madrid"],
+  "entity_ids": [
+    "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d9902",
+    "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98fe",
+    "urn:ngsi-ld:PointOfInterest:781",
+    "urn:ngsi-ld:PointOfInterest:282"
+  ]
+  },
+  {
+    "id": "Q103",
+    "type": "multi-hop",
+    "category": "Cross-service Comparison",
+    "question": "Which city, Madrid or Porto, has more POIs designated as a beach?",
+    "ground_truth": "Porto has more beaches — at least 12 POIs (e.g., Praia do Carneiro, Praia das Pastoras, Praia Internacional) found in the PortoDigital sheet under category 113. Madrid has zero POIs of category type 113 (beach). The only water-related POI in Madrid is 'Playa de Madrid' (category 1094), which is an artificial beach on the Manzanares river and is not a true beach.",
+    "brokers": ["portodigital", "madrid"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b52f979e000011cf7ec",
+      "urn:ngsi-ld:PointOfInterest:5cd04b52f979e000011cf7e4"
+    ]
+  },
+  {
+  "id": "Q104",
+  "type": "multi-hop",
+  "category": "Cross-service Comparison",
+  "question": "Which are the italian restaurants in Madrid and Porto?",
+  "ground_truth": "Here are the Italian restaurants found in Madrid and Porto:\n**Madrid:**\n- Restaurante Ouh Babbo\n- Restaurante Trattoria Sant Arcangelo\n- Restaurante La Pizzateca\n**Porto:**\n- Mammalena Porto (Rua Santa Catarina, 350)\n- Il Basilico (Rua Sá da Bandeira, 84)\n- Portarossa (Rua de Côrte Real, 289)",
+  "brokers": ["portodigital", "madrid"],
+  "entity_ids": []
+  },
+  {
+    "id": "Q105",
+    "type": "multi-hop",
+    "category": "Cross-service Comparison",
+    "question": "Which city, Porto or Madrid, has more Points of Interest related to public services of police and firefighters?",
+    "ground_truth": "Porto has more. Madrid has 0 POIs identifiable as police or firefighters. The Porto digital dataset has at least 1 such POI: 'Corpo de Polícia da Câmara Municipal do Porto' (Police Corps). 'Estabelecimento Prisional do Porto' (Prison Service) is also a related public service.",
+    "brokers": ["portodigital", "madrid"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4ef979e00001fe4805"
+    ]
+  },
+  {
+    "id": "Q106",
+    "type": "multi-hop",
+    "category": "Cross-service Comparison",
+    "question": "Which city, Porto and Madrid, provides more operationally useful real-time data about POIs, such as capacity and occupancy?",
+    "ground_truth": "Madrid. All 1,088 POIs in the Madrid dataset have valid capacity and occupancy values. The Porto digital dataset contains no capacity or occupancy fields. Porto's operational data is limited to parking total_slots and available_slots.",
+    "brokers": ["portodigital", "madrid"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4df979e000019f809e"
+    ]
+  },
+  {
+    "id": "Q107",
+    "type": "multi-hop",
+    "category": "Geospatial Reasoning",
+    "question": "Which are the museum within 100 meters of Porto Cathedral (Sé do Porto) at coordinates (Lat: 41.1426536 and Long: -8.6123193)?",
+    "ground_truth": "Within 100 meters of Porto Cathedral there is the Museu do Vitral",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:617a6d429296f50001870123"
+    ]
+  },
+  {
+  "id": "Q108",
+  "type": "multi-hop",
+  "category": "Geospatial Reasoning",
+  "question": "Between Porto and Madrid, which city has the largest number of POIs with Museums?",
+  "ground_truth": "Madrid has the largest number of museum POIs. Madrid has approximately 73 POIs identifiable as museums. Porto has approximately 19 POIs identifiable as museums (including Museu da Cidade, Museu do Vitral, Museu do Holocausto do Porto, Museu da Farmácia, World of Discoveries, WOW museums, etc.). Madrid has nearly 4 times more museums than Porto.",
+  "brokers": ["portodigital", "madrid"],
+  "entity_ids": [
+    "urn:ngsi-ld:PointOfInterest:5",
+    "urn:ngsi-ld:PointOfInterest:8",
+    "urn:ngsi-ld:PointOfInterest:38",
+    "urn:ngsi-ld:PointOfInterest:169",
+    "urn:ngsi-ld:PointOfInterest:5cd04b4ff979e00001f6f739",
+    "urn:ngsi-ld:PointOfInterest:5cd04b4ef979e00001fe480d",
+    "urn:ngsi-ld:PointOfInterest:617a6d429296f50001870123",
+    "urn:ngsi-ld:PointOfInterest:607467ab9296f500011126d8",
+    "urn:ngsi-ld:PointOfInterest:5cd04b56f979e000012c5df7",
+    "urn:ngsi-ld:PointOfInterest:60f933fd9296f500011497e3"
+  ]
+  },
+  {
+    "id": "Q109",
+    "type": "multi-hop",
+    "category": "Geospatial Reasoning",
+    "question": "How many WOW sub-experiences share virtually the same coordinates in Vila Nova de Gaia, in the city of Porto?",
+    "ground_truth": "WOW - Pink Palace, WOW - Mira Mira, and WOW - Pip",
+    "brokers": ["portodigital"],
+    "entity_ids": []
+  },
+  {
+    "id": "Q110",
+    "type": "multi-hop",
+    "category": "Geospatial Reasoning",
+    "question": "In the region of Porto, Portugal, which beaches are closest together and approximately how far apart are they?",
+    "ground_truth": "Praia do Carneiro (41.147821, -8.675476) and Praia das Pastoras (41.147406, -8.674999) are approximately 50 meters apart.",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b52f979e000011cf7ec"
+    ]
+  },
+  {
+    "id": "Q111",
+    "type": "multi-hop",
+    "category": "Geospatial Reasoning",
+    "question": "Is Zoo Santo Inacio geographically within the city of Porto or outside it?",
+    "ground_truth": "Outside Porto. Its coordinates (41.09259, -8.5376) place it in Vila Nova de Gaia municipality, approximately 7 km from Porto city center.",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b54f979e000012c9a3e"
+    ]
+  },
+  {
+    "id": "Q112",
+    "type": "multi-hop",
+    "category": "Geospatial Reasoning",
+    "question": "Which POIs in the region of Porto are located in Vila Nova de Gaia based on their coordinates (south of the Douro river, lat < 41.14)?",
+    "ground_truth": "POIs with location_coordinates_lat < 41.14 include: \n1. amDouro – Cruises in the Douro valley (41.13728, -8.618)\n2. Manos do Douro – Douro river cruises and events (41.13842123, -8.61045421)\n3. Barão de Fladgate – Restaurant in Taylor’s cellars (41.13397098, -8.6142848)\n4. Lugar do Desenho - Júlio Resende Foundation – Art foundation (41.126924219, -8.562525806)\n5. The Yeatman Gastronomic Restaurant – Michelin-starred restaurant (41.133332827, -8.613009914)\n6. Spa Vinothérapie® Caudalie – Spa in The Yeatman Hotel (41.133457068, -8.612996503)\n7. Espaço Património a Norte – Monastery of Serra do Pilar (41.137409, -8.608217)\n8. Knock Knock – Craft shop (41.137264, -8.612595)\n9. Honorary Consulate of the Republic of Croatia (41.1271235, -8.6067791)\n10. deCastro Gaia – Wine and food tasting (41.13763313, -8.6129721)\n11. Quinta da Boeira 1850- Arte e Cultura – Cultural site (41.1278615, -8.6113751)\n12. Poças – Port wine visitor centre (41.12767719, -8.61915468)\n13. 17.56 Museu da 1ª Demarcação – Wine museum (41.1363008, -8.6183464)\n14. WOW - Mira Mira – Haute cuisine restaurant (41.13399394, -8.61391897)\n15. Vinha Boutique Hotel – Hotel by the river (41.13241617, -8.57491965)\n16. WOW - Pink Palace – Rosé wine museum (41.13521411, -8.61383582)\n17. Zoo Santo Inacio'.",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+    ]
+  },
+  {
+    "id": "Q113",
+    "type": "multi-hop",
+    "category": "Geospatial Reasoning",
+    "question": "In available data for Portugal, which POI is furthest from Porto city centre based on coordinates?",
+    "ground_truth": "The furthest POI by name is 'Estela Golf Club' (41.45659, -8.776016) in Póvoa do Varzim. The furthest cultural/leisure POI is 'Zoo Santo Inacio' (41.09259, -8.5376) in Vila Nova de Gaia.",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b54f979e000012c9a18"
+    ]
+  },
+  {
+    "id": "Q114",
+    "type": "multi-hop",
+    "category": "Geospatial Reasoning",
+    "question": "Which Points of Interest are located in the Boavista area, in the city of Porto, (approximately lat 41.155-41.165, lon -8.660 to -8.680)?",
+    "ground_truth": "The following POIs are located in the Boavista area (lat 41.155-41.165, lon -8.660 to -8.680): 'Oceanus Parking' (41.16282, -8.66195), 'Rosior' (41.16316, -8.66765), 'Clube Português de Cinematografia/Cineclube do Porto' (41.15647, -8.64339), and 'Bessa XXI Stadium' (41.16226, -8.64256).",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b52f979e000011cf7d1",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4ff979e00001f6f764",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4ef979e00001fe47ff",
+      "urn:ngsi-ld:PointOfInterest:5d0a0e81bbcaaa0001de2842"
+    ]
+  },
+  {
+    "id": "Q115",
+    "type": "multi-hop",
+    "category": "Location & Facilities",
+    "question": "I'm located in Largo de S. João Novo, 29, in the city of Porto, in a ray of 1000 meters, which hospitals are there",
+    "ground_truth": "Within a 1000-meter radius of Largo de S. João Novo, 29 (coordinates 41.14209556, -8.61759424), the following hospital POI is present in the Porto Digital dataset: Hospital de Santo António (Centro Hospitalar do Porto) at coordinates 41.1470563, -8.61790538. Distance is approximately 550 meters. No other hospital POIs are listed within the 1000m radius in the database.",
+    "brokers": ["portodigital"],
+    "entity_ids": ["urn:ngsi-ld:PointOfInterest:5cd04b4ef979e00001fe4822"]
+  },
+  {
+    "id": "Q116",
+    "type": "multi-hop",
+    "category": "Location & Facilities",
+    "question": "Which POIs I can find with postal code 4000-045 in the city of Porto?",
+    "ground_truth": "Escola Superior de Música, Artes e Espectáculo - Instituto Politécnico do Porto.",
+    "brokers": ["portodigital"],
+    "entity_ids": ["urn:ngsi-ld:PointOfInterest:5cd04b53f979e00001354b2d"]
+  },
+  {
+    "id": "Q117",
+    "type": "multi-hop",
+    "category": "Location & Facilities",
+    "question": "Im located near a place with this email, farmaciavitoria@sapo.pt, in the city of Porto, I wanna know in a radius of 1000 meters, what poi's are there",
+    "ground_truth": "The email farmaciavitoria@sapo.pt belongs to Farmácia Vitória (ID: urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98ef), located at coordinates 41.1632872, -8.5727914. The following POIs from the Porto Digital dataset are within a 1000m radius: Farmácia Vitória (itself), São Roque da Lameira Pharmacy, Dolce Vita Parking, Contumil Pharmacy, Contumil Railway Station, and Solinca Dragão.",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98ef",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4ff979e00001f6f719",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4df979e000019f80ce",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4ef979e00001fe482a",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4df979e000019f80af",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4ff979e00001f6f760"
+    ]
+  },
+  {
+    "id": "Q118",
+    "type": "multi-hop",
+    "category": "Location & Facilities",
+    "question": "I have no idea where im at, I see Farmácia Soeiro near me, I only know im in the city of Porto",
+    "ground_truth": "If you see Farmácia Soeiro near you, you are located at Rua Santos Pousada, 71 in the Bonfim area of Porto (coordinates 41.1494082, -8.6005399). Within a 200-meter radius of this pharmacy, the following POIs from the Porto Digital dataset are present: Farmácia Soeiro (itself), São Bento Railway Station, and Auto Viação do Tâmega (bus stop).",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98df",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4ef979e000019f80b0",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4ef979e000019f8086"
+    ]
+  },
+  {
+    "id": "Q119",
+    "type": "multi-hop",
+    "category": "Location & Facilities",
+    "question": "In the region of Porto, where I can find the Casa Lima?",
+    "ground_truth": "Casa Lima is located at:\n1. Rua de Rodrigues Sampaio, 186\n2. Rua de Santa Catarina, 231\n3. Rua Guilherme Costa de Carvalho, 29",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4ff979e00001f6f759",
+      "urn:ngsi-ld:PointOfInterest:5dd680d74911820001dfb3d0",
+      "urn:ngsi-ld:PointOfInterest:5e7e12896e3bbb0001b31a24"
+    ]
+  },
+  {
+  "id": "Q120",
+  "type": "multi-hop",
+  "category": "Location & Facilities",
+  "question": "I reached 'Teatro de la Casa de Vacas', in the city of Madrid, but its closed due to vacation, I need the emptiest restaurant in a radius of 300 meters. List coordinates.",
+  "ground_truth": "The emptiest restaurant within 300 meters of Teatro de la Casa de Vacas is Restaurante La Pizzateca, coordinates: [40.419678, -3.710115], occupancy: 106",
+  "brokers": ["madrid"],
+  "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:523"
+     ]
+  },
+  {
+    "id": "Q121",
+    "type": "multi-hop",
+    "category": "Data Quality & Inference",
+    "question": "Is there a data quality anomaly in the capacity field of any Madrid POI?",
+    "ground_truth": "Yes. Avenida de la Albufera (id:107) has capacity = 1e+17, a clear placeholder or data entry error.",
+    "brokers": ["madrid"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:107"
+    ]
+  },
+  {
+    "id": "Q122",
+    "type": "multi-hop",
+    "category": "Occupancy & Capacity Analysis",
+    "question": "I'm on vacation at the 'Hotel Palacio de Tepa' in Madrid, and I need a bar within 100 meters that isn't very crowded.",
+    "ground_truth": "Within 100 meters of 'Hotel Palacio de Tepa' in Madrid, the less crowded (with relatively low occupancy) bar is the Bar El Ático:\n- Location: 40.416381, -3.708019\n- Capacity: 578\n- Occupancy: 232",
+    "brokers": ["madrid"],
+    "entity_ids": ["urn:ngsi-ld:PointOfInterest:903"]
+  },
+  {
+  "id": "Q123",
+  "type": "multi-hop",
+  "category": "Occupancy & Capacity Analysis",
+  "question": "I wanna go to the emptiest beach within 1000 meters from Avenida de Francisco Silvela, in Madrid city, is there any?",
+  "ground_truth": "No. There are no beaches within 1000 meters of Avenida de Francisco Silvela in Madrid. Madrid is an inland city with no coastal beaches. The only beach-related POI in the Madrid dataset is 'Playa de Madrid' (urn:ngsi-ld:PointOfInterest:711), which is an artificial beach located at coordinates 41.417034, -3.710578, approximately 6.5 km from Avenida de Francisco Silvela (coordinates 40.43128, -3.673358).",
+  "brokers": ["madrid"],
+  "entity_ids": ["urn:ngsi-ld:PointOfInterest:711", "urn:ngsi-ld:PointOfInterest:235"]
+  },
+  {
+  "id": "Q124",
+  "type": "multi-hop",
+  "category": "Occupancy & Capacity Analysis",
+  "question": "I see this place with an capacity of 34, which possible place is this? I'm in Madrid city",
+  "ground_truth": "In the Madrid dataset, there are multiple POIs with a capacity of 34. These include: Floristería Frescura Floral, Floristería Follaje, Floristería Felices Flores, Floristería Flor y Vida, Floristería Fina and Floristería Flora",
+  "brokers": ["madrid"],
+  "entity_ids": [
+"urn:ngsi-ld:PointOfInterest:150",
+"urn:ngsi-ld:PointOfInterest:709",
+"urn:ngsi-ld:PointOfInterest:275",
+"urn:ngsi-ld:PointOfInterest:720",
+"urn:ngsi-ld:PointOfInterest:85",
+"urn:ngsi-ld:PointOfInterest:806"
+  ]
+  },
+  {
+    "id": "Q125",
+    "type": "multi-hop",
+    "category": "Thematic & Semantic Relations",
+    "question": "In the region of Porto, how many Points of Interest have a thematic connection to Port wine or wine culture?",
+    "ground_truth": "The PortoDigital sheet lists multiple wine-related POIs, including WOW - The Wine Experience, WOW - Pink Palace, The Yeatman Gastronomic Restaurant, VINUM Restaurant & Wine Bar, Poças, and 17.56 Museu da 1ª Demarcação. A thematic count of wine-specific POIs is at least 6.",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:60f933fd9296f500011497e3",
+      "urn:ngsi-ld:PointOfInterest:5cd04b52f979e000011cf7bd",
+      "urn:ngsi-ld:PointOfInterest:5cd04b54f979e000012c9a19",
+      "urn:ngsi-ld:PointOfInterest:5cd04b59f979e000011eba93",
+      "urn:ngsi-ld:PointOfInterest:5cd04b59f979e000011eba91"
+    ]
+  },
+  {
+    "id": "Q126",
+    "type": "multi-hop",
+    "category": "Thematic & Semantic Relations",
+    "question": "How many Points of Interest in the region of Porto are linked to the University of Porto (Universidade do Porto) and what do they represent?",
+    "ground_truth": "The PortoDigital sheet lists 6 POIs linked to the University of Porto, primarily as academic faculties: Faculdade de Arquitetura, Faculdade de Ciências, Faculdade de Direito, Faculdade de Desporto, Faculdade de Farmácia, and Faculdade de Letras.",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b53f979e00001354b1c",
+      "urn:ngsi-ld:PointOfInterest:5cd04b53f979e00001354b1e",
+      "urn:ngsi-ld:PointOfInterest:5cd04b53f979e00001354b21",
+      "urn:ngsi-ld:PointOfInterest:5cd04b53f979e00001354b20",
+      "urn:ngsi-ld:PointOfInterest:5cd04b53f979e00001354b24"
+    ]
+  },
+  {
+    "id": "Q127",
+    "type": "multi-hop",
+    "category": "Thematic & Semantic Relations",
+    "question": "Which are the named of POIs located in the 'Alameda das Fontainhas'?",
+    "ground_truth": "1. Comemorações S. João 2015 \n2. Fontaínhas",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4ef979e00001fe47dc",
+      "urn:ngsi-ld:PointOfInterest:5cd04b57f979e000010a33c7"
+    ]
+  },
+  {
+    "id": "Q128",
+    "type": "multi-hop",
+    "category": "Thematic & Semantic Relations",
+    "question": "Which Points of Interest in Portugal relate to filigree craftsmanship?",
+    "ground_truth": "Only one POI in the PortoDigital sheet is directly related to filigree:\n1. Ag Jewels - Filigrana Store\n2. Ourivesaria Coutinho\n3.Efeito Luso, Lda\n4.Chic n Cheap - Silver Outlet\n5.Ourivesaria Eduardo Carneiro\n6.Ourivesaria Neves & Filha\n7.José Rosas",
+    "brokers": ["portodigital"],
+    "entity_ids": []
+  },
+  {
+    "id": "Q129",
+    "type": "multi-hop",
+    "category": "Thematic & Semantic Relations",
+    "question": "In the region of Porto, which Points of Interest have 'Farmácia' (Pharmacy) as their category?",
+    "ground_truth": "There are 15 POIs in the PortoDigital sheet with category 80 (Pharmacy/Farmácia), including 'Soeiro Pharmacy', 'Silva Pereira Suc. Pharmacy', 'Melo Taveira Pharmacy', and 'Serpa Pinto Pharmacy'.",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98df",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98de",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98e0",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98dc"
+    ]
+  },
+  {
+    "id": "Q130",
+    "type": "multi-hop",
+    "category": "Thematic & Semantic Relations",
+    "question": "In the region of Porto, Portugal, which Points of Interest are related to the Portuguese Age of Discovery?",
+    "ground_truth": "2 main POIs: 'World of Discoveries' (interactive museum and theme park about Portuguese navigators) and '17.56 Museu da 1ª Demarcação' (museum of the oldest demarcated wine region, connected to Douro trade routes historically associated with exploration).",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b56f979e000012c5df7",
+      "urn:ngsi-ld:PointOfInterest:5cd04b59f979e000011eba91"
+    ]
+  },
+  {
+    "id": "Q131",
+    "type": "multi-hop",
+    "category": "Thematic & Semantic Relations",
+    "question": "In the region of Porto, which Points of Interest are related to sacred Jewish art or Jewish heritage?",
+    "ground_truth": "1 POI: 'Museu Judaico do Porto' (Jewish Museum of Porto), located at Rua Guerra Junqueiro, 325, focused on Jewish history, culture, and sacred art in the Iberian Peninsula's largest synagogue.",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5d9af990491182000146f0aa"
+    ]
+  },
+  {
+    "id": "Q132",
+    "type": "multi-hop",
+    "category": "Thematic & Semantic Relations",
+    "question": "In the region of Porto, which Points of Interest are Cemeteries (Cemitério)?",
+    "ground_truth": "There are several cemeteries in the PortoDigital dataset, including:  Cementerio de Foz do Douro, Cementerio de Aldoar, Cementerio de Ramalde, Cementerio de Prado do Repouso, Cementerio de Lordelo do Ouro, Cementerio de Campanhã, Cementerio de Agramonte, Cementerio de Lapa, Cementerio de Paranhos, Cementerio de Los Ingleses, Cementerio do Bonfim, Cementerio de Agramonte, Cementerio de Los Ingleses, Cementerio de Prado do Repouso and Cementerio de Lapa",
+ "brokers": ["portodigital"],
+    "entity_ids": [
+        "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98f4",
+        "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98f2",
+        "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98f5",
+        "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98f1",
+        "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98f6",
+        "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98fb",
+        "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98f9",
+        "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98f8",
+        "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98fa",
+        "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98fd",
+        "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98fc",
+        "urn:ngsi-ld:PointOfInterest:5cd04b51f979e000019b65f7",
+        "urn:ngsi-ld:PointOfInterest:5cd04b51f979e000019b65f9",
+        "urn:ngsi-ld:PointOfInterest:5cd04b52f979e000011cf7c0",
+        "urn:ngsi-ld:PointOfInterest:5cd04b52f979e000011cf7ca"
+    ]
+  },
+  {
+    "id": "Q133",
+    "type": "multi-hop",
+    "category": "Thematic & Semantic Relations",
+    "question": "In the region of Porto, which Points of Interest are Marinas?",
+    "ground_truth": "2 main marinas in the PortoDigital dataset: 'Freixo Marina' (marina with 76 vessel capacity and winch up to 10 tons) and 'Douro Marina' (marina with 300 vessel capacity up to 20 meters length, located on the Douro River).",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4df979e000019f80a0",
+      "urn:ngsi-ld:PointOfInterest:5cd04b52f979e000011cf7d3"
+    ]
+  },
+  {
+    "id": "Q134",
+    "type": "multi-hop",
+    "category": "Thematic & Semantic Relations",
+    "question": "In the region of Porto, which Points of Interest are related to sacred art (arte sacra) based on their names?",
+    "ground_truth": "POIs related to sacred art include 'Museu de Arte Sacra' (Sacred Art Museum in Igreja de Santo Ildefonso), 'Capela de Nossa Senhora do Ó', 'Capela de Nossa Senhora das Verdades', and 'Igreja de São Francisco', which contains significant baroque sacred art.",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b55f979e000013060c7",
+      "urn:ngsi-ld:PointOfInterest:5cd04b51f979e000019b65b9",
+      "urn:ngsi-ld:PointOfInterest:5cd04b58f979e000015dbe35"
+    ]
+  },
+  {
+    "id": "Q135",
+    "type": "multi-hop",
+    "category": "Data Quality & Inference",
+    "question": "What is the straight-line distance in kilometers (rounded to 2 decimal places) between 'Freixo Marina' and 'Douro Marina' in the city of Porto?",
+    "ground_truth": "Freixo Marina (41.143167625, -8.577425478) and Douro Marina (41.140670631, -8.652178429) are approximately 6.4 km apart (straight-line distance).",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4df979e000019f80a0",
+      "urn:ngsi-ld:PointOfInterest:5cd04b52f979e000011cf7d3"
+    ]
+  },
+  {
+    "id": "Q136",
+    "category": "Itinerary & Recommendation",
+    "question": "In the city of Porto, there are any hotels or appartments dedicated to surfers?",
+    "ground_truth": "There are two: \n- Surftraining House: A cosy apartment just 100 meters from the beach, offering surf lessons and surf trips. Perfect for wave lovers or those wanting to experience surfing.\n- GZ Hostel: Offers help organizing surf classes for guests.",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98dc"
+    ]
+  },
+  {
+    "id": "Q137",
+    "type": "multi-hop",
+    "category": "Itinerary & Recommendation",
+    "question": "What we can eat in Casa Guedes in the city of Porto?",
+    "ground_truth": "Casa Guedes is well known for the famous shank sandwiches 'sandes de pernil'",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b55f979e000013060c5"
+    ]
+  },
+  {
+    "id": "Q138",
+    "type": "multi-hop",
+    "category": "Data Quality & Inference",
+    "question": "Which fields are populated in Madrid POIs but consistently missing from cultural POIs in the city of Porto?",
+    "ground_truth": "Madrid populates capacity, occupancy, relevance, and priceRange. Porto's cultural POIs do not have these fields and instead provide rich, multilingual text descriptions (description, description_es, description_pt). Porto does have parking-specific fields (total_slots, available_slots) that Madrid lacks.",
+    "brokers": ["portodigital", "madrid"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4ef979e000019f8095"
+    ]
+  },
+  {
+    "id": "Q139",
+    "type": "multi-hop",
+    "category": "Data Quality & Inference",
+    "question": "Are all Points of Interest in Rua Santos Posada in city of from the same data provider?",
+    "ground_truth": "Yes. There are three Points of Interest with the source \"https://api.ropi.porto.digital\"",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+        "urn:ngsi-ld:PointOfInterest:5cd04b4cf979e000011d98df",
+        "urn:ngsi-ld:PointOfInterest:5cd04b4ff979e00001f6f731",
+        "urn:ngsi-ld:PointOfInterest:5e3059798965710001cdf66d"
+
+    ]
+  },
+  {
+  "id": "Q140",
+  "type": "multi-hop",
+  "category": "Location & Facilities",
+  "question": "What is the closest Hospital to Polícia da Câmara Municipal in the city of Porto?",
+  "ground_truth": "The closest hospital is 'Hospital de Santo António (Centro Hospitalar do Porto)' at coordinates 41.1470563, -8.61790538.",
+  "brokers": ["portodigital"],
+  "entity_ids": [
+    "urn:ngsi-ld:PointOfInterest:5cd04b4ef979e00001fe4805",
+    "urn:ngsi-ld:PointOfInterest:5cd04b4ef979e00001fe4822"
+  ]
+  },
+  {
+    "id": "Q141",
+    "type": "multi-hop",
+    "category": "Itinerary & Recommendation",
+    "question": "I am at the Museu do Vitral in the city of Porto. Which is the nearest Hotel?  The Spa Wellness Center do Hotel Solverde or Hotel Moon & Sun Porto? ",
+    "ground_truth": "The nearst is the Hotel Moon & Sun Porto",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5e7c89fa6e3bbb0001692b37",
+      "urn:ngsi-ld:PointOfInterest:5cd04b55f979e000013060a9",
+      "urn:ngsi-ld:PointOfInterest:617a6d429296f50001870123"
+    ]
+  },
+  {
+    "id": "Q142",
+    "type": "multi-hop",
+    "category": "Itinerary & Recommendation",
+    "question": "Which Points of Interest located around the city of Porto (max 20km) are suitable for educational purposes for children based on their descriptions?",
+    "ground_truth": "At least 4: 'World of Discoveries' (interactive museum about Portuguese navigators), 'Zoo Santo Inacio' (largest zoo in northern Portugal with diverse animal collection), 'Jumpers Trampolim Parque' (trampoline park with 9 amusement stations), and 'SEA LIFE Porto' (aquarium with educational marine exhibits).",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b56f979e000012c5df7",
+      "urn:ngsi-ld:PointOfInterest:5cd04b54f979e000012c9a3e",
+      "urn:ngsi-ld:PointOfInterest:5e418c7d8965710001324a0c"
+    ]
+  },
+  {
+    "id": "Q143",
+    "type": "multi-hop",
+    "category": "Itinerary & Recommendation",
+    "question": "If a visitor wants to explore wine, chocolate, fashion, and cork history in a single visit, which Porto Digital location contains all these experiences?",
+    "ground_truth": "The WOW cultural quarter in Vila Nova de Gaia (centred at 41.1340/-8.6139) hosts all of these: WOW The Wine Experience, WOW The Chocolate Story, WOW Porto Fashion & Fabric Museum, and WOW Planet Cork. All within the same physical complex.",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:60f933fd9296f500011497e3",
+      "urn:ngsi-ld:PointOfInterest:6172ede29296f50001f4a674"
+    ]
+  },
+  {
+    "id": "Q144",
+    "type": "multi-hop",
+    "category": "Itinerary & Recommendation",
+    "question": "In the city of Porto, which POIs offer virtual reality or interactive gaming entertainment?",
+    "ground_truth": "'Viral Virtual Reality' (VR gaming and simulation centre with 300m² facility), 'Porto Exit Games' (escape game rooms) also offers interactive entertainment, Paço do Bispo offers a virtual tour experience online and World of Discoveries",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:618bb6d08e037700014f6473",
+      "urn:ngsi-ld:PointOfInterest:5cf7e0df48f51c0001809406",
+      "urn:ngsi-ld:PointOfInterest:5cd04b4ef979e00001fe4829",
+      "urn:ngsi-ld:PointOfInterest:5cd04b56f979e000012c5df7"
+    ]
+  },
+  {
+    "id": "Q145",
+    "type": "multi-hop",
+    "category": "Geospatial Reasoning",
+    "question": "Which is the rail station at 200 meters of 'Praça da Liberdade' in the city of Porto?",
+    "ground_truth": "São Bento Railway Station.",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5f22a8a36e3bbb00016364ef"
+    ]
+  },
+  {
+    "id": "Q146",
+    "type": "multi-hop",
+    "category": "Location & Facilities",
+    "question": "I'm at Tasca La Pipa in the city of Madrid, I need the closest restaurant from me, with an occupancy rate of a maximum 10",
+    "ground_truth": "Tasca La Pipa is located at coordinates 40.415688, -3.704503. Based on the Madrid dataset, the closest restaurant is La Chulapa, located at latitude 40.418363, longitude -3.704681, with an occupancy of 7",
+    "brokers": ["madrid"],
+    "entity_ids": ["urn:ngsi-ld:PointOfInterest:48", "urn:ngsi-ld:PointOfInterest:1038"]
+  },
+  {
+    "id": "Q147",
+    "type": "multi-hop",
+    "category": "Heritage & Architecture",
+    "question": "In the city of Porto, which POI was originally a convent and is now a cultural centre?",
+    "ground_truth": "Mosteiro de São Bento da Vitória (urn:ngsi-ld:PointOfInterest:5cd04b50f979e0000196becd) was originally a Benedictine monastery from the 17th century and is now used as a cultural centre and performance venue by the Teatro Nacional São João.",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b50f979e0000196becd"
+    ]
+  },
+  {
+    "id": "Q148",
+    "type": "multi-hop",
+    "category": "Heritage & Architecture",
+    "question": "Which Porto Digital POI is housed in a former prison building and now contains a photography centre?",
+    "ground_truth": "Edifício da ex-Cadeia e Tribunal da Relação do Porto (urn:ngsi-ld:PointOfInterest:5cd04b50f979e0000196be9e) was originally a gaol and Court of Appeal. It has been restored and now houses the Centro Português de Fotografia (Portuguese Centre for Photography).",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b50f979e0000196be9e"
+    ]
+  },
+  {
+    "id": "Q149",
+    "type": "multi-hop",
+    "category": "Heritage & Architecture",
+    "question": "Which Porto Digital POI is a neoclassical hospital building designed by English architect John Carr?",
+    "ground_truth": "Hospital de Santo António (urn:ngsi-ld:PointOfInterest:5cd04b4ef979e00001fe4822) was built between 1770 and 1825 in neo-Palladian English style (also known as 'Port Wine Architecture') following a plan by the English architect John Carr.",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:5cd04b4ef979e00001fe4822"
+    ]
+  },
+  {
+    "id": "Q150",
+    "type": "multi-hop",
+    "category": "Heritage & Architecture",
+    "question": "Which Porto Digital POI is the oldest bookshop in Porto, opened in 1733?",
+    "ground_truth": "Livraria Lello (urn:ngsi-ld:PointOfInterest:621629fd8e037700019c3258) was founded in 1906, not 1733. There is no POI in the Porto Digital dataset that opened in 1733. The oldest bookshop referenced is Livraria Lello from 1906.",
+    "brokers": ["portodigital"],
+    "entity_ids": [
+      "urn:ngsi-ld:PointOfInterest:621629fd8e037700019c3258"
+    ]
+  }
+]

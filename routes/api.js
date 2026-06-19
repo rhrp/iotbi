@@ -94,7 +94,7 @@ function apiReqCounter(req,res,next)
    debug('Request Counter::Waiting for API...');
 }
 /**
- * At this stage, is checkd if the user have access to the requested fiware service
+ * At this stage, is checked if the user have access to the requested fiware service
  */
 function apiCheckAccessFiwareService(req,res,next)
 {
@@ -173,7 +173,7 @@ function apiSend(req,res,next)
 {
    let lTable=res.locals.outputTable;
    let lFormat=res.locals.outputFormat;
-   let lEntityType=res.entityType;
+   let lEntityType=res.locals.entityType;
    let lErrorCode=res.locals.errorCode;
    let lErrorMessage=res.locals.errorMessage;
    if(lTable!=undefined)
@@ -205,6 +205,8 @@ router.get('/v1/system/performance/requests',           [apiReqCounter,validateT
 router.get('/v1/system/performance/state',              [apiReqCounter,validateToken,apiCheckAccessSystem,apiAccounting,apiSystem.servicePerformanceSystemMetrics]);
 router.get('/v1/system/performance/startTracking',      [apiReqCounter,validateToken,apiCheckAccessSystem,apiAccounting,apiSystem.servicePerformanceStartTrackingMetrics]);
 router.get('/v1/system/performance/stopTracking',       [apiReqCounter,validateToken,apiCheckAccessSystem,apiAccounting,apiSystem.servicePerformanceStopTrackingMetrics]);
+router.get('/v1/:fiwareService/:entityType/geometadata.:format',             [apiReqCounter,validateToken,apiCheckAccessFiwareService,apiAccounting,apiSystem.serviceGeoMetadata,apiSend]);
+router.get('/v1/:fiwareService/:entityType/:radius/geometadata.:format',     [apiReqCounter,validateToken,apiCheckAccessFiwareService,apiAccounting,apiSystem.serviceGeoMetadata,apiSend]);
 router.get('/v1/:fiwareService/:entityType',            [perfanalyser.hookStartRequest,apiReqCounter,validateToken,apiCheckAccessFiwareService,apiAccounting,apiCache.doCacheAPI,apiSelector,perfanalyser.hookEndRequest,apiSend]);
 router.get('/v1/:fiwareService/:entityType/:entityId',  [perfanalyser.hookStartRequest,apiReqCounter,validateToken,apiCheckAccessFiwareService,apiAccounting,apiCache.doCacheAPI,apiSelector,perfanalyser.hookEndRequest,apiSend]);
 

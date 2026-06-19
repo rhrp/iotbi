@@ -1,0 +1,1240 @@
+{
+  "evals": {
+    "Q001": {
+      "id": "Q001",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output matches the expected coordinates exactly (Latitude 40.41378, Longitude -3.692127). No incorrect or contradictory information present; the extra introductory sentence does not affect factual accuracy.",
+      "passAt": 1
+    },
+    "Q002": {
+      "id": "Q002",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output states the same factual value (15€) for 'Museo del Prado' in Madrid and merely adds contextual wording. It matches the expected price exactly, contains no incorrect or contradictory information, and therefore aligns fully with the evaluation steps.",
+      "passAt": 1
+    },
+    "Q003": {
+      "id": "Q003",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output contains the exact expected numeric values for latitude (41.13467044) and longitude (-8.61518296), includes both elements (though presented with longitude before latitude), and adds non-contradictory contextual location (Gaia/Porto). There is no incorrect or contradictory information, so it fully matches the expected output.",
+      "passAt": 1
+    },
+    "Q004": {
+      "id": "Q004",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output conveys the exact expected value (7€) and adds contextual wording identifying the museum and city; it is factually accurate, contains no contradictory information, and therefore fully aligns with the expected output.",
+      "passAt": 1
+    },
+    "Q005": {
+      "id": "Q005",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output contains the exact expected numeric longitude value (-3.712238) and simply adds contextual wording identifying it as the longitude of Plaza de España in Madrid. There is no incorrect or contradictory information; the added text is permitted by the guideline that some expected elements may be missing or extra context may be present.",
+      "passAt": 1
+    },
+    "Q006": {
+      "id": "Q006",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Latitude matches exactly (41.15333745). Longitude differs only in the final digits (-8.6791688 vs -8.67916889), a negligible 0.00000009 difference; no incorrect or contradictory information, so output effectively aligns with expected.",
+      "passAt": 1
+    },
+    "Q007": {
+      "id": "Q007",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output contains the exact expected latitude and longitude values (40.42656, -3.706879). The added context naming Hospital Santa Cristina in Madrid is accurate and introduces no contradictions, so the response is factually aligned with the expected output and the evaluation criteria.",
+      "passAt": 1
+    },
+    "Q008": {
+      "id": "Q008",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output exactly matches the expected output: same place name (Gabinete do Munícipe, Porto) and identical GPS coordinates (Latitude 41.14935071, Longitude -8.61020208). There are no missing elements or contradictory facts, so the output is fully accurate with respect to the test case.",
+      "passAt": 1
+    },
+    "Q009": {
+      "id": "Q009",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output contains the exact expected numeric value (578) and adds contextual text naming the location ('Parque de la Cuña Verde de Vicálvaro' in Madrid). Per the evaluation steps, the extra wording is acceptable and there is no incorrect or contradictory information, so the output aligns with the expected result.",
+      "passAt": 1
+    },
+    "Q010": {
+      "id": "Q010",
+      "score": 0.1,
+      "threshold": 0.7,
+      "success": false,
+      "reason": "The actual output directly contradicts the expected output: the expected provides coordinates (Latitude 41.16343859, Longitude -8.60523462) for a parking lot on Rua do Visconde Setúbal in Porto, while the response asserts no parking lot exists and refuses to give coordinates. This is factually incorrect relative to the expected data; the allowance for missing elements does not justify contradicting the provided coordinates.",
+      "passAt": 6
+    },
+    "Q011": {
+      "id": "Q011",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output conveys the same factual value as the expected output (the number 1212), merely formatted with a comma and embedded in a complete sentence mentioning Hospital Santa Cristina in Madrid. There is no incorrect or contradictory information, and the added context is acceptable under the evaluation steps that allow extra or missing elements.",
+      "passAt": 1
+    },
+    "Q012": {
+      "id": "Q012",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output conveys the same numeric relevance value as the expected output while adding context (mentions Hospital Santa Cristina in Madrid). There are no contradictions or factual errors; the expected single numeric token was effectively provided within a sentence, so the response aligns fully with the evaluation steps.",
+      "passAt": 1
+    },
+    "Q013": {
+      "id": "Q013",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output conveys the exact expected numeric result (210) and adds contextual wording ('The occupancy of 'Karaoke Box' in Madrid is 210 people.') which does not introduce any incorrect or contradictory information. The expected output was just the number 210, and the response preserves that value, so it meets the evaluation criteria.",
+      "passAt": 1
+    },
+    "Q014": {
+      "id": "Q014",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output includes the expected address exactly (Rua Costa Cabral, 293) and only adds non-contradictory contextual wording identifying the location as Silva Pereira Suc. Pharmacy in Porto. There is no incorrect or conflicting information, so it fully aligns with the expected output.",
+      "passAt": 1
+    },
+    "Q015": {
+      "id": "Q015",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output contains the expected address exactly (Rua de Serpa Pinto, 645) and adds harmless clarifying context (naming the pharmacy and city). There is no incorrect or contradictory information, so the output aligns fully with the expected result.",
+      "passAt": 1
+    },
+    "Q016": {
+      "id": "Q016",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Coordinates in the actual output match the expected values to high precision: expected Lat 41.1276 vs actual 41.12767719 (difference ~0.00007719) and expected Lon -8.6191 vs actual -8.61915468 (difference ~0.00005468). No incorrect or contradictory information; actual output adds more precision and identification of the place, so it aligns with the expected output.",
+      "passAt": 6
+    },
+    "Q017": {
+      "id": "Q017",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output contains the exact expected phone number (+351 225371370) and only adds a harmless descriptive phrase identifying the business; there is no incorrect or contradictory information, so it fully aligns with the expected output.",
+      "passAt": 1
+    },
+    "Q018": {
+      "id": "Q018",
+      "score": 0.0,
+      "threshold": 0.7,
+      "success": false,
+      "reason": "Expected a numeric value (1088) but the actual output returned a refusal and no number. This is factually incorrect relative to the expected output and fails to provide the requested data, instead asking for more details that are not part of the test case.",
+      "passAt": 6
+    },
+    "Q019": {
+      "id": "Q019",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output conveys the same factual information as the expected output: the price is 30€ (same numeric value and currency) and only adds harmless contextual wording about 'Hostal El Estudio' in Madrid. There is no incorrect or contradictory information, so it aligns fully with the expected output.",
+      "passAt": 1
+    },
+    "Q020": {
+      "id": "Q020",
+      "score": 0.7,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly includes the expected pharmacy (Soeiro Pharmacy at Rua Santos Pousada, 71, Porto) and even adds a postal code, which supports factual accuracy. However, it also lists an extra entry (Bonfim Pharmacy) located on Rua do Bonfim, not Rua Santos Pousada, which introduces incorrect or misleading information despite the qualifier “or very near.” Because the key expected element is present and accurate but the additional erroneous listing reduces overall alignment, the score reflects a mostly correct but imperfect response.",
+      "passAt": 6
+    },
+    "Q021": {
+      "id": "Q021",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly identifies Bonfim Pharmacy at Rua do Bonfim, 73 as the closest to Farmacia Soeiro (Rua Santos Pousada, 71) and adds precise coordinates. It omits the approximate distance (~700 meters) from the expected output but provides a non-contradictory qualitative phrase (“very near your current location”), and contains no incorrect information, so it aligns with the evaluation steps.",
+      "passAt": 1
+    },
+    "Q022": {
+      "id": "Q022",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output includes the expected address exactly (Rua Santos Pousada, 71) and adds additional accurate context (Soeiro Pharmacy, Porto, postal code 4000-485) with no incorrect or contradictory information, so it is fully aligned with the expected output.",
+      "passAt": 2
+    },
+    "Q023": {
+      "id": "Q023",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output presents the same numeric value as the expected output (1679) in a full sentence: 'The capacity of Hospital Santa Cristina in Madrid is 1,679 people.' The comma is formatting only and the statement adds contextual wording without introducing any incorrect or contradictory information.",
+      "passAt": 1
+    },
+    "Q024": {
+      "id": "Q024",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output accurately matches the expected numeric result: it reports 1212/1679 and gives the equivalent percentage (rounded to 72.2%, consistent with the expected 72.19%). It contains no incorrect or contradictory information and any extra phrasing (hospital and city) does not conflict with the expected output, so it meets the evaluation criteria.",
+      "passAt": 1
+    },
+    "Q025": {
+      "id": "Q025",
+      "score": 0.1,
+      "threshold": 0.7,
+      "success": false,
+      "reason": "The expected output is the number 11, but the actual output states there are 6 points of interest and lists six items. This directly contradicts the expected value, so the response is factually incorrect relative to the test case. A minor strength is that the actual output lists specific locations, but it fails to match the required numeric result and therefore receives very low alignment.",
+      "passAt": 6
+    },
+    "Q026": {
+      "id": "Q026",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output contains all three expected places with identical coordinates (Mercado de la Cebada 40.413983, -3.707115; Barrio de Tetúan 40.4512, -3.701238; Mirador del Parque de la Vaguada 40.471377, -3.715312). The only differences are ordering and the added word “currently,” which do not introduce contradictions or factual errors, so the response matches the expected output.",
+      "passAt": 2
+    },
+    "Q027": {
+      "id": "Q027",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output communicates the exact expected value (8€) and only adds contextual phrasing about the museum admission; per step 2 extra wording is acceptable and there is no incorrect or contradictory information, so it fully matches the expected output.",
+      "passAt": 1
+    },
+    "Q028": {
+      "id": "Q028",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output contains the exact expected email (farmacia@serpapinto.com) and adds non-contradictory contextual wording (identifying Serpa Pinto Pharmacy in Porto). Minor formatting differences (additional text and punctuation) do not change the factual accuracy, so the response aligns fully with the expected output.",
+      "passAt": 1
+    },
+    "Q029": {
+      "id": "Q029",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output contains the exact expected phone number (+351 228300558) and only adds contextual text identifying Serpa Pinto Pharmacy in Porto. There is no incorrect or contradictory information, and the extra wording is permissible under the instruction to accept outputs that include additional elements.",
+      "passAt": 1
+    },
+    "Q030": {
+      "id": "Q030",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output exactly contains the expected street address \"Rua Santos Pousada, 71\" and adds identifying context (Soeiro Pharmacy in Porto). This matches the expected value, includes no incorrect or contradictory information, and extra context does not invalidate the address.",
+      "passAt": 1
+    },
+    "Q031": {
+      "id": "Q031",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output includes the exact expected phone number (+351 225371370) with matching formatting and adds contextual text; no incorrect or contradictory information is present. Extra wording and punctuation are allowed per the evaluation steps, so the response fully aligns with the expected output.",
+      "passAt": 1
+    },
+    "Q032": {
+      "id": "Q032",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output exactly matches the expected output: both state the phone number for Bonfim Pharmacy in Porto, Portugal as +351 225372444. There are no missing elements or contradictory facts, so the response is fully accurate according to the evaluation steps.",
+      "passAt": 1
+    },
+    "Q033": {
+      "id": "Q033",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly states 348 out of 732 and gives an occupancy of ~47.5%, which matches the expected 348/732 = 47.54% (minor rounding difference). There is no incorrect or contradictory information, and the verbal format is acceptable under the allowance for missing exact formatting.",
+      "passAt": 1
+    },
+    "Q034": {
+      "id": "Q034",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output accurately matches the expected output: it states Museo del Prado is more expensive (15€) than Museo de América (3€) and explicitly notes Prado has the higher price. All key details (museum names and prices) are present and there is no incorrect or contradictory information.",
+      "passAt": 1
+    },
+    "Q035": {
+      "id": "Q035",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output directly affirms the expected answer by naming Karaoke Box and saying there is a place for karaoke in Madrid. It adds consistent, accurate extra details (Spanish description, coordinates 40.417805, -3.706217, city-center location and private rooms) and contains no contradictions, so it aligns with the evaluation steps.",
+      "passAt": 1
+    },
+    "Q036": {
+      "id": "Q036",
+      "score": 0.0,
+      "threshold": 0.7,
+      "success": false,
+      "reason": "The actual output contradicts the expected numeric result (expected the value 23 but the response states there are no points ≥15€ and all prices are '0€'), so it is factually incorrect per step 1 and contains incorrect information as noted in step 3. The expected element (the value 23) is missing, so the output fails to match the test case.",
+      "passAt": 6
+    },
+    "Q037": {
+      "id": "Q037",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Compared actual to expected: both price (40€) and capacity (1401) match exactly. No incorrect or contradictory information found. The actual output adds benign extra context (Hostal El Pilar in Madrid) but does not conflict with the expected values.",
+      "passAt": 1
+    },
+    "Q038": {
+      "id": "Q038",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output conveys the same numeric value as the expected output (expected 1679; actual writes 1,679) and adds a contextual phrase naming Hospital Santa Cristina in Madrid. Per the evaluation steps, the extra wording is acceptable and there is no incorrect or contradictory information, so the response aligns fully with the expected output.",
+      "passAt": 1
+    },
+    "Q039": {
+      "id": "Q039",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output explicitly reports the expected occupancy value (1,212) and additionally gives total capacity (1,679). This matches the expected figure (step 1), contains no incorrect or contradictory information (step 3), and extra information does not invalidate correctness (step 2).",
+      "passAt": 1
+    },
+    "Q040": {
+      "id": "Q040",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output conveys the exact expected numeric value (expected '1679' vs actual '1,679') and only adds harmless contextual phrasing about hospital capacity. There is no incorrect or contradictory information, so it fully matches the expected result.",
+      "passAt": 3
+    },
+    "Q041": {
+      "id": "Q041",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Per step 1 the actual output conveys the same numeric value as expected (expected 1067; actual shown as 1,067). Per step 2 the extra wording is acceptable (it adds the POI name 'Hospital Clínico San Carlos' and city 'Madrid') and does not remove required content. Per step 3 there is no incorrect or contradictory information. Therefore the response is fully accurate.",
+      "passAt": 1
+    },
+    "Q042": {
+      "id": "Q042",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output conveys the exact expected numeric value (1171) expressed as “1,171” and adds contextual wording about Museo del Prado; there is no incorrect or contradictory information, and per the steps extra phrasing is acceptable.",
+      "passAt": 1
+    },
+    "Q043": {
+      "id": "Q043",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output includes the exact expected numeric value 870 and adds only harmless contextual wording (“The current occupancy of the Museo del Prado is 870 people”), which does not contradict the expected output. This fully aligns with the evaluation steps (matching value, missing elements tolerated, no incorrect information).",
+      "passAt": 1
+    },
+    "Q044": {
+      "id": "Q044",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output conveys the exact expected numeric value (36) and introduces only harmless contextual wording (“The capacity of Churrería Valor in Madrid is 36 people”). There is no incorrect or contradictory information, and extra wording is permitted by the evaluation steps, so the response aligns fully with the expected output.",
+      "passAt": 1
+    },
+    "Q045": {
+      "id": "Q045",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output accurately conveys the expected value 35 (reports occupancy as 35 people). The extra contextual wording (“The current occupancy of Churrería Valor in Madrid is 35 people.”) does not introduce any incorrect or contradictory information and is acceptable per the evaluation steps.",
+      "passAt": 1
+    },
+    "Q046": {
+      "id": "Q046",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output explicitly gives the same numeric value (rendered as \"1,662\") as the expected output (1662) and no incorrect or contradictory information is present. The response adds permissible context (a full sentence naming Biblioteca Municipal Luis Rosales in Madrid and stating capacity in people), which is acceptable under step 2, so the output is factually correct and aligned with the expected result.",
+      "passAt": 1
+    },
+    "Q047": {
+      "id": "Q047",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output conveys the same numeric value (1,410) as the expected output (1410) and introduces only additional, non-contradictory context (current occupancy of Biblioteca Municipal Luis Rosales in Madrid). The numeric formatting differs (comma added) but does not change factual accuracy, so the response aligns fully with the evaluation steps.",
+      "passAt": 1
+    },
+    "Q048": {
+      "id": "Q048",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output conveys the exact expected numeric value 1171 (formatted as “1,171”) while adding contextual wording. Per the evaluation steps, extra phrasing is acceptable and there is no incorrect or contradictory information, so the response aligns with the expected output.",
+      "passAt": 1
+    },
+    "Q049": {
+      "id": "Q049",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output conveys the expected numeric value (1057) exactly — formatted with a comma and placed in a full sentence about Museo Lázaro Galdiano’s current occupancy. Extra contextual wording is permissible per the instructions and there is no incorrect or contradictory information.",
+      "passAt": 1
+    },
+    "Q050": {
+      "id": "Q050",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output conveys the same factual value as the expected output (the capacity for Cines Callao in Madrid given as 1,968 versus expected 1968). The response adds contextual phrasing but contains no incorrect or contradictory information, so it aligns fully with the expected result.",
+      "passAt": 1
+    },
+    "Q051": {
+      "id": "Q051",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output conveys the same factual information: the admission price is 15 EUR (written as 15€) and simply adds contextual phrasing. There is no incorrect or contradictory information; format differs from the exact expected string but that is acceptable per the evaluation steps.",
+      "passAt": 1
+    },
+    "Q052": {
+      "id": "Q052",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output states the admission price as 3€ which matches the expected value of 3 EUR. There is no incorrect or contradictory information; the additional context (museum name and full sentence) is allowed per step 2.",
+      "passAt": 1
+    },
+    "Q053": {
+      "id": "Q053",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output conveys the same factual information as expected: the price is 6 euros. It matches the numeric value and currency (uses the € symbol instead of 'EUR') and adds contextual wording but contains no incorrect or contradictory details, so it meets the evaluation criteria.",
+      "passAt": 1
+    },
+    "Q054": {
+      "id": "Q054",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output matches the expected value: both state the admission price as 3 EUR (actual: 'The admission price ... is 3€'). The response adds contextual wording (site name and currency symbol) but contains no incorrect or contradictory information, satisfying the evaluation steps.",
+      "passAt": 1
+    },
+    "Q055": {
+      "id": "Q055",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output conveys the same admission price and currency (7€ vs expected 7 EUR) and adds context (museum name and Madrid) which is acceptable per the evaluation steps. There is no incorrect or contradictory information, so the response aligns fully with the expected output.",
+      "passAt": 1
+    },
+    "Q056": {
+      "id": "Q056",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output gives the admission price as 8€ (equivalent to the expected 8 EUR) and adds the museum name and location without introducing any incorrect or contradictory information. It therefore matches the expected value and is correct.",
+      "passAt": 1
+    },
+    "Q057": {
+      "id": "Q057",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output accurately conveys the expected value: it states the price as 10€ for Palacio de Linares (Casa de America) in Madrid, matching the expected 10 EUR. The difference is only formatting and added context; no incorrect or contradictory information is present.",
+      "passAt": 1
+    },
+    "Q058": {
+      "id": "Q058",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output communicates the same factual value (30 euros) as the expected output. The only differences are formatting (uses the € symbol rather than 'EUR') and added context naming the property and city; there is no incorrect or contradictory information, so it meets the evaluation criteria.",
+      "passAt": 1
+    },
+    "Q059": {
+      "id": "Q059",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output conveys the same price and currency as the expected output (5 EUR vs 5€), adds harmless contextual detail (Museo del Jamón in Madrid) and contains no incorrect or contradictory information, so it aligns with the evaluation steps.",
+      "passAt": 1
+    },
+    "Q060": {
+      "id": "Q060",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output conveys the same factual information as the expected output: it explicitly states the price range is 0 EUR and that the Palacio de Cristal in Madrid is free to enter. The response contains additional acceptable detail but introduces no incorrect or contradictory information, satisfying the evaluation steps.",
+      "passAt": 1
+    },
+    "Q061": {
+      "id": "Q061",
+      "score": 0.7,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Correctly identifies Hostal Pizarro and Hostal Las Murallas with the 30–60€ range and contains no contradictory facts. However it omits one expected high-range hostal (Hostal Vázquez de Mella) and entirely leaves out the fixed-price hosts (Hostal El Pilar and Hostal Persal at 40€), so it is incomplete.",
+      "passAt": 1
+    },
+    "Q062": {
+      "id": "Q062",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output accurately reflects the expected fact: all Madrid hotels show a priceRange of 0€ (i.e., no hotel price data). It contains no incorrect or contradictory statements. It omits the explicit note about hostals and the phrase that the field is ‘not populated,’ but per the evaluation steps missing expected elements are acceptable, so the response aligns with the expectation.",
+      "passAt": 1
+    },
+    "Q063": {
+      "id": "Q063",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output exactly matches the expected output: it identifies Chá Clube as the POI in Edifício Aviz in Porto, provides the same full address (Edifício Aviz – Avenida da Boavista, 3477 Loja 19, Porto, 4100-139), and indicates it is the only POI found. No incorrect or contradictory information present.",
+      "passAt": 1
+    },
+    "Q064": {
+      "id": "Q064",
+      "score": 0.2,
+      "threshold": 0.7,
+      "success": false,
+      "reason": "The actual output diverges substantially from the expected six POIs. Expected six specific locations (Churrería Valor; Iglesia de Santa María la Real de La Almudena; Juzgados de Plaza de Castilla; Hospital Universitario Gregorio Marañón; Restaurante StreetXO; Atocha) but the actual lists four different items (Churrería Valor, Liceo de Madrid, Hospital Gregorio Marañón, Palacio Real de Madrid), omitting four expected POIs. The output also contains factual contradictions: it asserts all listed sites have occupancy >90% yet the provided ratios show Liceo de Madrid (1154/1563 ≈ 73.8%) and Palacio Real (1449/1693 ≈ 85.6%) are below 90%, so only Churrería Valor and the Hospital actually exceed 90%. Due to missing expected entries and internal numeric inconsistencies, the response is largely incorrect.",
+      "passAt": 6
+    },
+    "Q065": {
+      "id": "Q065",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output matches the expected output: it uses the same numerator (1212) and denominator (1679) and reports the occupancy as ≈72.2%, which is a correct rounding of the expected 72.19%. No incorrect or contradictory information; any minor rounding difference is acceptable under the evaluation rules.",
+      "passAt": 1
+    },
+    "Q066": {
+      "id": "Q066",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output conveys the exact expected facts: price 5€ and occupancy 13. It adds contextual phrasing (Teatro Español in Madrid, 'people') but introduces no incorrect or contradictory information. Per the evaluation steps, the content is factually accurate and aligned with the expected output.",
+      "passAt": 1
+    },
+    "Q067": {
+      "id": "Q067",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output correctly reproduces the expected street address and phone number (Rua Alcaide Faria, 77 and +351 226187006) and adds harmless extra detail (postal code 4100-034 and city Porto). Per step 1 it is factually accurate, per step 2 added details are acceptable, and per step 3 there is no incorrect or contradictory information.",
+      "passAt": 3
+    },
+    "Q068": {
+      "id": "Q068",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "All four expected fields match the actual output exactly: Capacity 444, Occupancy 210, Relevance 4, and Price 0€. The actual includes the venue label and slight wording change (“Price range”) but conveys the same value and contains no incorrect or contradictory information, so it meets the evaluation criteria.",
+      "passAt": 1
+    },
+    "Q069": {
+      "id": "Q069",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output communicates the exact expected numeric value (66) and adds context naming the venue ('Pastelería Delicias del Paladar' in Madrid) and that it is a capacity in people. There is no incorrect or contradictory information, and per the evaluation steps the extra wording is acceptable despite the expected output being just the number.",
+      "passAt": 1
+    },
+    "Q070": {
+      "id": "Q070",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output accurately conveys both expected values: price of 10€ and capacity of 514 (stated as 514 people). It adds contextual location (Palacio de Linares in Madrid) but contains no contradictory or incorrect information.",
+      "passAt": 1
+    },
+    "Q071": {
+      "id": "Q071",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output includes the expected entry: Silva Pereira Suc. Pharmacy with the address Rua Costa Cabral, 293 (matches expected). It adds an extra pharmacy (Vaz Pharmacy) and appends the city (Porto); there is a minor wording variation (‘Rua de Costa Cabral’) for the second entry but no contradictory or incorrect information regarding the expected item. These facts align with the evaluation steps.",
+      "passAt": 1
+    },
+    "Q072": {
+      "id": "Q072",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output contains the exact expected value (0€) and conveys the same fact; the added descriptive phrasing about Hotel Eurostars Madrid Tower does not contradict or alter the value and no incorrect information is present. The output therefore aligns with the expected result.",
+      "passAt": 1
+    },
+    "Q073": {
+      "id": "Q073",
+      "score": 0.9,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly identifies Gran Hotel Inglés as the relevant hotel, matching the expected hotel name and relevance threshold. It omits the specific coordinates (40.418346, -3.705546) and the explicit relevance score (2), but per the steps missing elements are acceptable. There is no incorrect or contradictory information.",
+      "passAt": 1
+    },
+    "Q074": {
+      "id": "Q074",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output includes the exact expected fax number +351 225519188 and provides contextual labeling (Silva Pereira Suc. Pharmacy in Porto). There is no incorrect or contradictory information, and the added context is acceptable per the evaluation rules.",
+      "passAt": 2
+    },
+    "Q075": {
+      "id": "Q075",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output contains the expected street and number exactly (Rua da Alfândega, 10) and correctly adds consistent extra details (postal code 4050-029, Porto, Portugal) and contextualizes the site (Casa do Infante). There is no incorrect or contradictory information compared to the expected output.",
+      "passAt": 1
+    },
+    "Q076": {
+      "id": "Q076",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output accurately states that the São Bento da Vitória Monastery hosts theatrical performances organized by Teatro Nacional de S. João (TNSJ), matching the expected claim. It adds non-contradictory details (concerts, special events, outside institutions), which are acceptable per the evaluation steps. No incorrect or contradictory information is present.",
+      "passAt": 1
+    },
+    "Q077": {
+      "id": "Q077",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly conveys the expected numeric price (15€) and adds contextual phrasing (“The admission price of the Museo del Prado in Madrid is 15€”); per step 2 the extra wording is acceptable. There is no incorrect or contradictory information, so the response accurately matches the expected output.",
+      "passAt": 2
+    },
+    "Q078": {
+      "id": "Q078",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output correctly identifies the temple as \"Templo de Debod\", matching the expected output exactly. There is no incorrect or contradictory information; the added declarative wording does not change the factual accuracy.",
+      "passAt": 1
+    },
+    "Q079": {
+      "id": "Q079",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output contains the expected year 1887 exactly and correctly states that the Palacio de Cristal in Madrid was built in 1887. The addition of contextual wording is accurate and introduces no incorrect or contradictory information, so it aligns fully with the expected output.",
+      "passAt": 1
+    },
+    "Q080": {
+      "id": "Q080",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output conveys the same factual claim as the expected output: it houses the Casa de América, a cultural centre that promotes relations between Spain and Latin America. It adds correct, consistent details (identifying the building as the Palacio de Linares in Madrid and saying it is currently used as Casa de América) and contains no incorrect or contradictory information.",
+      "passAt": 1
+    },
+    "Q081": {
+      "id": "Q081",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly identifies the expected restaurant (Sobrino de Botín) and adds accurate, non-contradictory details (Madrid location, ~300+ years operation, famous for roast suckling pig). It matches the expected output and contains no incorrect information, so it satisfies the evaluation steps.",
+      "passAt": 1
+    },
+    "Q082": {
+      "id": "Q082",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output contains the expected facts: it identifies Madrid and correctly states the stadium was Atlético de Madrid's home until 2017. The added latitude/longitude are extra but not incorrect or contradictory. Therefore the response matches the expected output fully and contains no factual errors.",
+      "passAt": 1
+    },
+    "Q083": {
+      "id": "Q083",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output conveys the same fact as the expected output — that there is a tropical garden inside the station — and even adds a correct specific location (Estación de Atocha, Madrid). Comparison shows no missing or contradictory information, so it aligns fully with the expected statement.",
+      "passAt": 1
+    },
+    "Q084": {
+      "id": "Q084",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output exactly lists the two expected hospitals with identical coordinates (Hospital Universitario Gregorio Marañón and Hospital de la Princesa). Differences are only in wording/format (pluralization, bullets vs numbering), and the added context ('within 700 meters', '(Madrid)', quotes) which do not contradict the expected data. No factual errors found.",
+      "passAt": 2
+    },
+    "Q085": {
+      "id": "Q085",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output accurately conveys the museum’s purpose (history of Spanish railways) and collections (locomotives and carriages, matching expected ‘locomotives and wagons’). Location is given as coordinates (40.39134, -3.69177) which correspond to the Museo del Ferrocarril at the former Delicias station in Madrid, so there is no incorrect or contradictory information. The only minor difference is using coordinates instead of explicitly naming ‘former Delicias station,’ which is acceptable under the evaluation rules.",
+      "passAt": 1
+    },
+    "Q087": {
+      "id": "Q087",
+      "score": 0.8,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output directly affirms the expected fact — that Madrid’s Palacio de Cristal (Parque del Retiro) is used for contemporary art exhibitions — so it matches the expected output. However, it adds an extraneous claim about the Palacio de Cristal in Porto not being used for that purpose, which was not part of the expected output and could introduce unverified or potentially incorrect information. For matching the core expectation but including an unnecessary, possibly misleading extra statement, the response receives a modestly high score.",
+      "passAt": 1
+    },
+    "Q088": {
+      "id": "Q088",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output contains the exact expected email address (parque.palacio@agoraporto.pt) within a contextual sentence, with no incorrect or contradictory information. The added context does not remove or alter the expected element, so it aligns with the expected output.",
+      "passAt": 1
+    },
+    "Q089": {
+      "id": "Q089",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output identifies the same pool named in the expected output (Piscinas de Campanhã) and provides the correct website URL. It adds consistent supplementary details (coordinates, email, facility description) and contains no incorrect or contradictory information relative to the expected result for Sequeira Lucas e Ventura, so it aligns fully with the evaluation steps.",
+      "passAt": 1
+    },
+    "Q090": {
+      "id": "Q090",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly identifies both restaurants at Rua do Choupelo, 250 in Vila Nova de Gaia, matching the expected address and municipality. It does not introduce any incorrect or contradictory information; the only minor difference is omitting the parenthetical reference to Porto, which is acceptable under the evaluation rules.",
+      "passAt": 1
+    },
+    "Q091": {
+      "id": "Q091",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output contains the expected phrase Praça da Liberdade and appends relevant context (InterContinental hotel and Vitália Pharmacy in Porto). Per the evaluation steps this is acceptable even with extra information and there is no incorrect or contradictory content, so the response aligns with the expected output.",
+      "passAt": 1
+    },
+    "Q092": {
+      "id": "Q092",
+      "score": 0.9,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly identifies Porto as associated with Estádio do Dragão and notes that FC Porto uses it, and it correctly states there is no association for Madrid (aligns with step 1 and 3). It omits the explicit mention that the Solinca Dragão gym is located at Estádio do Dragão, but per step 2 missing elements can be considered acceptable. No incorrect or contradictory information is present, so the response largely matches the expected output.",
+      "passAt": 1
+    },
+    "Q093": {
+      "id": "Q093",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output accurately matches the expected output: it states that both Museo Lázaro Galdiano and Museo Nacional de Ciencias Naturales cost 7€ and are equally priced. It contains no incorrect or contradictory information and directly reflects the test case parameters (both museums, 7€).",
+      "passAt": 1
+    },
+    "Q094": {
+      "id": "Q094",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output correctly identifies Restaurante StreetXO and the 60-80€ price range from the expected output. The response is a slight rephrasing (labels it as the most expensive attraction admission fee in Madrid) but contains no incorrect or contradictory information, satisfying the factual-accuracy and allowance-for-rephrasing evaluation steps.",
+      "passAt": 2
+    },
+    "Q095": {
+      "id": "Q095",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output includes the exact expected name Museo del Ferrocarril and adds accurate, non-contradictory context (Madrid, former Delicias train station). It matches the expected output and contains no incorrect information, so it aligns fully with the evaluation steps.",
+      "passAt": 1
+    },
+    "Q096": {
+      "id": "Q096",
+      "score": 0.9,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly states the building hosts both the Museum of Transport and Communications and a Congress Centre, matching the expected function. It adds non-contradictory detail about management by the Association for the Transport and Communications Museum. It omits the specific 1987 decision to house the future museum mentioned in the expected text, so not fully identical but factually aligned.",
+      "passAt": 1
+    },
+    "Q097": {
+      "id": "Q097",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output exactly matches the expected list of six cemeteries and their email addresses (Ramalde, Prado do Repouso, Agramonte, Lapa, Paranhos, Bonfim) with no incorrect or contradictory information; the only addition is a redundant concluding sentence, which does not affect factual accuracy.",
+      "passAt": 5
+    },
+    "Q098": {
+      "id": "Q098",
+      "score": 0.8,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output correctly identifies three of the four expected Saba-operated parkings (Praça Carlos Alberto, Praça Gomes Teixeira, Praça de Lisboa) and provides matching Saba contact emails, but it omits Palácio da Justiça Parking from the list. There is no incorrect or contradictory information, so partial credit is warranted.",
+      "passAt": 2
+    },
+    "Q099": {
+      "id": "Q099",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output includes the exact expected address (Rua do Infante D. Henrique, 8) and only adds correct, non-contradictory details (postal code, city, country). No incorrect information; matches expected.",
+      "passAt": 1
+    },
+    "Q100": {
+      "id": "Q100",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly identifies Porto as the location (matching the expected output) and gives accurate supporting detail about a Porto viewpoint on the D. Fernando Wall. The added statement about no evidence of a related viewpoint in Madrid is extra but not incorrect or contradictory. Therefore the response aligns with the evaluation steps and contains no factual errors relative to the test case.",
+      "passAt": 1
+    },
+    "Q101": {
+      "id": "Q101",
+      "score": 0.8,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The conclusion is correct (Madrid has more hospitals), satisfying the core comparison. However, the actual output undercounts both cities relative to the expected counts: expected Madrid 16 but actual lists at least 7, and expected Porto 5 but actual lists only 1. Per the evaluation steps this is acceptable if elements are missing, but the answer is incomplete on factual detail, not contradictory.",
+      "passAt": 6
+    },
+    "Q102": {
+      "id": "Q102",
+      "score": 0.0,
+      "threshold": 0.7,
+      "success": false,
+      "reason": "The actual output directly contradicts the expected output: expected shows the 'Parking' category (type 418) present in both Porto (e.g., 'Parque da Cidade - south entrance parking', 'Porto Gran Plaza Parking') and Madrid (e.g., 'Aeropuerto Adolfo Suárez Madrid-Barajas' with parking), and both cities having pharmacies (Porto category 80; Madrid POIs like 'Farmacia Figueroa Martínez'). The actual output incorrectly claims Madrid has no POI category data and that there are no shared categories, omitting and denying the specific parking and pharmacy examples in the test case, so it is factually wrong and contradictory to the expected details.",
+      "passAt": 6
+    },
+    "Q103": {
+      "id": "Q103",
+      "score": 0.7,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output reaches the same high-level conclusion that Porto has more beach POIs (strength) and gives example POIs for Porto and names Madrid’s 'Playa de Madrid' (strength). However it omits the expected explicit detail that Porto has at least 12 category-113 POIs and fails to mention category numbers. More importantly, it ambiguously states Madrid has one POI ‘directly designated as a beach,’ which contradicts the expected finding that Madrid has zero category-113 beaches and that 'Playa de Madrid' is category 1094 (an artificial/recreational beach, not a true beach). These omissions and the contradictory designation reduce factual accuracy.",
+      "passAt": 1
+    },
+    "Q104": {
+      "id": "Q104",
+      "score": 0.6,
+      "threshold": 0.7,
+      "success": false,
+      "reason": "The response partially matches the expected output: it correctly lists Restaurante Ouh Babbo and Restaurante Trattoria Sant Arcangelo for Madrid and includes Il Basilico with the correct address (Rua Sá da Bandeira, 84) for Porto. However it omits La Pizzateca (Madrid) and omits Mammalena Porto and Portarossa (Porto), and instead adds an unexpected entry (1927 Gelataria Portuense). There are no direct contradictions, but multiple expected restaurants are missing, so the output is only partially accurate.",
+      "passAt": 6
+    },
+    "Q105": {
+      "id": "Q105",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly states Porto has more POIs and that Madrid has none, matching the expected conclusion. It even quantifies Porto (21) which is consistent with the expected claim that Porto has at least one such POI. The response omits naming the specific POIs (e.g., 'Corpo de Polícia da Câmara Municipal do Porto' or the prison service), but per the evaluation steps missing expected elements is acceptable. There is no incorrect or contradictory information.",
+      "passAt": 1
+    },
+    "Q106": {
+      "id": "Q106",
+      "score": 0.9,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output correctly conveys the key factual contrast: Madrid includes capacity and occupancy for POIs while Porto lacks those operational attributes (matches expected). There are no contradictions. However, it omits the specific detail that Madrid has 1,088 POIs with valid values and fails to mention Porto’s operational parking fields (total_slots and available_slots), so it is accurate but missing those expected specifics.",
+      "passAt": 1
+    },
+    "Q107": {
+      "id": "Q107",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly identifies the same museum (Museu do Vitral) within 100 meters of Porto Cathedral (Sé do Porto), matches the expected factual claim, contains no contradictory information, and the additional note that no other museums were found is consistent with the expectation.",
+      "passAt": 1
+    },
+    "Q108": {
+      "id": "Q108",
+      "score": 0.8,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly captures the key comparative fact from the expected output — that Madrid has more museum POIs than Porto — so it is factually accurate and not contradictory. However, it omits the expected numeric details (Madrid ≈73 museums, Porto ≈19) and the nearly 4× ratio, making it incomplete relative to the expected content. Per the evaluation steps, missing elements can be tolerated, but the lack of the specific counts and ratio reduces completeness.",
+      "passAt": 5
+    },
+    "Q109": {
+      "id": "Q109",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output includes all three expected sub-experiences (WOW - Pink Palace, WOW - Mira Mira, WOW - Pip), correctly notes there are three, and adds consistent location details (Rua do Choupelo, 39, Vila Nova de Gaia). No incorrect or contradictory information present; extra detail is acceptable.",
+      "passAt": 3
+    },
+    "Q110": {
+      "id": "Q110",
+      "score": 0.1,
+      "threshold": 0.7,
+      "success": false,
+      "reason": "The actual output directly contradicts the expected result: the test expected Praia do Carneiro (41.147821, -8.675476) and Praia das Pastoras (41.147406, -8.674999) about 50 meters apart, but the actual output claims there are no beaches listed in the NGSI-LD IoT Platform for Porto and therefore provides no distances. This is a factual mismatch with the expected data. The response’s strength is clearly stating a data limitation and offering to accept more details, but it fails to match the expected information.",
+      "passAt": 6
+    },
+    "Q111": {
+      "id": "Q111",
+      "score": 0.9,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly concludes the zoo is not within Porto, which matches the expected determination. It contains no incorrect or contradictory information. However, it omits key expected details: the coordinates (41.09259, -8.5376), the municipality (Vila Nova de Gaia), and the approximate distance (~7 km) from Porto city center, so it is incomplete though not wrong.",
+      "passAt": 1
+    },
+    "Q112": {
+      "id": "Q112",
+      "score": 0.8,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly lists and gives accurate coordinates for the majority of expected POIs (15 of the 17 expected entries, including amDouro, Manos do Douro, Barão de Fladgate, The Yeatman, Spa Caudalie, Espaço Património a Norte, Knock Knock, Honorary Consulate of Croatia, deCastro Gaia, Quinta da Boeira, Poças, 17.56 Museu, WOW - Mira Mira, Vinha Boutique Hotel, WOW - Pink Palace). Shortcomings: it omits two expected POIs (Lugar do Desenho - Júlio Resende Foundation and Zoo Santo Inacio) and adds one unexpected entry (WOW - Pip). There is no contradictory coordinate data for the overlapping items. Given the high overlap and correct coords but the notable omissions/addition, the output is mostly accurate but not perfect.",
+      "passAt": 1
+    },
+    "Q113": {
+      "id": "Q113",
+      "score": 0.8,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly identifies Estela Golf Club and its coordinates (matches expected coordinates to full precision) and contains no incorrect or contradictory information. However it omits the municipality (Póvoa do Varzim) and entirely omits the second expected item (Zoo Santo Inacio in Vila Nova de Gaia), so it is accurate but incomplete.",
+      "passAt": 1
+    },
+    "Q114": {
+      "id": "Q114",
+      "score": 0.5,
+      "threshold": 0.7,
+      "success": false,
+      "reason": "Partial match: the actual output correctly lists Oceanus Parking (41.16282, -8.66195) and Rosior (41.16316, -8.66765) from the expected set, but it omits Clube Português de Cinematografia/Cineclube do Porto and Bessa XXI Stadium. The response also adds many extra POIs and asserts that “all are within the specified Boavista area (lat 41.155–41.165, lon -8.660 to -8.680),” which is incorrect given some listed locations (and two expected POIs) have longitudes around -8.643 to -8.642, outside the stated longitude range. Because of the correct partial overlap but omissions and the factual/contradictory area claim, the alignment is moderate.",
+      "passAt": 6
+    },
+    "Q115": {
+      "id": "Q115",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly identifies the expected POI (Centro Hospitalar do Porto / Santo António) at the exact coordinates 41.1470563, -8.61790538 and states no other hospitals within a 1000 m radius, matching the expected result. It omits the approximate distance (~550 m) and the source coordinates for Largo de S. João Novo, 29, but there is no incorrect or contradictory information and missing elements are allowed by the evaluation steps.",
+      "passAt": 1
+    },
+    "Q116": {
+      "id": "Q116",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly identifies the expected institution (Escola Superior de Música, Artes e Espectáculo - Instituto Politécnico do Porto) presented as ESMAE - IPP, matches the given postal code 4000-045 and provides an accurate address (Rua da Alegria, 503) and relevant description. No incorrect or contradictory information is present; extra details are permissible per the instructions.",
+      "passAt": 1
+    },
+    "Q086": {
+      "id": "Q086",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output accurately restates the expected fact: Porto and the Casa da Música Parking are associated with Casa da Música, even adding a consistent detail that the parking is located under the concert hall. The extra statement about no evidence for a Madrid concert-hall parking is not contradictory to the expected output. No incorrect information detected.",
+      "passAt": 4
+    },
+    "Q117": {
+      "id": "Q117",
+      "score": 0.1,
+      "threshold": 0.7,
+      "success": false,
+      "reason": "The actual output does not match the expected output: it fails to list the target POI Farmácia Vitória (and omits the provided email farmaciavitoria@sapo.pt, NGSI-LD ID, and coordinates 41.1632872, -8.5727914) and none of the expected nearby POIs (São Roque da Lameira Pharmacy, Dolce Vita Parking, Contumil Pharmacy, Contumil Railway Station, Solinca Dragão) appear. While the evaluation allows some missing elements, here the actual list contains entirely different POIs (e.g., Silva Pereira Suc. Pharmacy, multiple parks, hostels, clubs) so factual alignment is poor and information is effectively incorrect for the given test case.",
+      "passAt": 5
+    },
+    "Q118": {
+      "id": "Q118",
+      "score": 0.7,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output accurately gives the pharmacy name (translated), full address (Rua Santos Pousada, 71 with postal code) and exact coordinates (41.1494082, -8.6005399), correctly confirming Porto. It does not introduce any incorrect or contradictory facts. However it omits expected elements: the Bonfim neighborhood mention and the nearby POIs within 200 m (São Bento Railway Station and Auto Viação do Tâmega), so it is incomplete relative to the expected output.",
+      "passAt": 1
+    },
+    "Q119": {
+      "id": "Q119",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "All three expected addresses are present and correctly listed (Rua de Rodrigues Sampaio, 186; Rua de Santa Catarina, 231; Rua Guilherme Costa de Carvalho, 29). The actual output adds consistent, noncontradictory details (Porto region, postal codes, coordinates, and descriptions) that enhance factual accuracy rather than contradicting the expected items.",
+      "passAt": 1
+    },
+    "Q120": {
+      "id": "Q120",
+      "score": 0.2,
+      "threshold": 0.7,
+      "success": false,
+      "reason": "The actual output contradicts the expected result: the expected emptiest restaurant was 'Restaurante La Pizzateca' at [40.419678, -3.710115] with occupancy 106, but the actual lists 'Goya' at [40.419706, -3.689335] with occupancy 71 and capacity 578. This is a clear factual mismatch with the test case details, though the response is partially informative by providing a candidate name, coordinates, occupancy and capacity.",
+      "passAt": 5
+    },
+    "Q121": {
+      "id": "Q121",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly identifies the capacity anomaly for Avenida de la Albufera and gives the same numeric value (100000000000000000 = 1e+17). It adds other POIs with the same unrealistic capacity, which is acceptable per the instructions, and contains no contradictory facts. It omitted the explicit id (107) from the expected text, but the evaluation rules allow missing elements.",
+      "passAt": 1
+    },
+    "Q122": {
+      "id": "Q122",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output matches the expected output exactly: it identifies Bar El Ático as the less crowded bar within 100 meters of Hotel Palacio de Tepa, provides the same coordinates (40.416381, -3.708019), capacity (578) and occupancy (232), and correctly states the relatively low occupancy with no contradictory information.",
+      "passAt": 1
+    },
+    "Q123": {
+      "id": "Q123",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly matches the core expected claim: there is no beach within 1000 meters of Avenida de Francisco Silvela and nearby POIs do not include beaches (step 1). It contains no incorrect or contradictory information (step 3). It omits supplementary details from the expected output — the 'Playa de Madrid' POI (urn and coordinates), its ~6.5 km distance, and the avenue coordinates — but step 2 allows the answer to be considered correct despite missing elements, so this is acceptable.",
+      "passAt": 1
+    },
+    "Q124": {
+      "id": "Q124",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output lists all six expected Madrid POIs (Frescura Floral, Follaje, Felices Flores, Flor y Vida, Fina, Flora) and adds benign location/specialty details. There are no missing expected elements and no contradictory information, so it matches the expected output closely.",
+      "passAt": 1
+    },
+    "Q125": {
+      "id": "Q125",
+      "score": 0.7,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output satisfies the core quantitative requirement (claims at least 105 wine-related POIs, which meets/exceeds the expected thematic count of at least 6) and does not contradict the expectation. However it omits the specific named POIs called out in the test (WOW - The Wine Experience, WOW - Pink Palace, The Yeatman Gastronomic Restaurant, VINUM Restaurant & Wine Bar, Poças, 17.56 Museu da 1ª Demarcação) and provides no supporting details or evidence for the high count, making the claim unsupported. Because it meets the numeric expectation but lacks the expected particulars and substantiation, the alignment is good but imperfect.",
+      "passAt": 2
+    },
+    "Q126": {
+      "id": "Q126",
+      "score": 0.2,
+      "threshold": 0.7,
+      "success": false,
+      "reason": "The actual output poorly matches the expected list of six University of Porto faculties. Expected six POIs (Faculdades: Arquitetura, Ciências, Direito, Desporto, Farmácia, Letras); actual lists five items and only one clearly corresponds to an expected faculty (Document Services of the Faculty of Law → Faculdade de Direito). The other actual items (museum, shop, rectory, fine arts library) are different facility types and include an unexpected Fine Arts faculty item not in the expected set. Several expected faculties (Arquitetura, Ciências, Desporto, Farmácia, Letras) are missing and the count (5 vs 6) contradicts the expected output, so alignment is low.",
+      "passAt": 5
+    },
+    "Q127": {
+      "id": "Q127",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output includes both expected POI names — 'Comemorações S. João 2015' and 'Fontaínhas' — matching the expected output exactly. There is no incorrect or contradictory information; only a minor formatting difference (an introductory sentence) which does not affect correctness.",
+      "passAt": 1
+    },
+    "Q128": {
+      "id": "Q128",
+      "score": 0.9,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output includes six of the seven expected POIs (Ag Jewels, Ourivesaria Coutinho, Efeito Luso, Chic n Cheap, Ourivesaria Neves & Filha, José Rosas) with accurate filigree-focused descriptions, but it omits Ourivesaria Eduardo Carneiro and instead adds Caldeirão da Cati. There are no obvious contradictions in the entries and overall alignment with the expected Porto/filigree focus is strong, so a small deduction is applied for the missing expected POI.",
+      "passAt": 1
+    },
+    "Q129": {
+      "id": "Q129",
+      "score": 0.3,
+      "threshold": 0.7,
+      "success": false,
+      "reason": "The actual output lists only 5 pharmacies (Soeiro, Bonfim, Padrão, Vaz Teixeira Suc., Vitália) while the expected output specifies 15 POIs with category 80 and explicitly mentions Silva Pereira Suc., Melo Taveira, and Serpa Pinto—three of which are missing. The response correctly identifies Soeiro and correctly labels items as pharmacies, but it fails to report the expected total count and omits multiple named POIs, so it is factually incomplete though not directly contradictory.",
+      "passAt": 5
+    },
+    "Q130": {
+      "id": "Q130",
+      "score": 0.4,
+      "threshold": 0.7,
+      "success": false,
+      "reason": "The response correctly includes World of Discoveries but omits the expected 17.56 Museu da 1ª Demarcação, a primary item in the test case. It adds Casa do Infante (relevant) and Panamar Concept Store (not in the expected list and a questionable claim about inspiration by Henry’s motto), introducing unsupported or potentially incorrect information. Based on the comparison and presence of omitted and dubious elements, the answer only partially matches the expected output.",
+      "passAt": 5
+    },
+    "Q131": {
+      "id": "Q131",
+      "score": 0.3,
+      "threshold": 0.7,
+      "success": false,
+      "reason": "The response lists sites tied to Jewish heritage in Porto (strength), but it fails to include the single expected POI — 'Museu Judaico do Porto' at Rua Guerra Junqueiro, 325 — and omits the museum’s stated focus on Jewish history, culture and sacred art and the note about the Iberian Peninsula’s largest synagogue. Some listed items (e.g., Escadas da Esnoga) are relevant, but the core expected information is missing and several specific claims are unverified, so the output does not match the expected result.",
+      "passAt": 5
+    },
+    "Q132": {
+      "id": "Q132",
+      "score": 0.8,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly lists three cemeteries that appear in the expected set (Prado do Repouso, Lapa, Bonfim) and provides precise coordinates, and it contains no contradictory information. However it omits many other expected cemeteries (Foz do Douro, Aldoar, Ramalde, Lordelo do Ouro, Campanhã, Agramonte, Paranhos, Los Ingleses, etc.) and does not reflect the duplicates shown in the expected text. Given that missing elements are allowed but completeness is lacking, the response is mostly accurate but incomplete.",
+      "passAt": 1
+    },
+    "Q133": {
+      "id": "Q133",
+      "score": 0.1,
+      "threshold": 0.7,
+      "success": false,
+      "reason": "The actual output directly contradicts the expected output: the test expected two specific marinas (Freixo Marina with 76-vessel capacity and winch up to 10 tons, and Douro Marina with 300-vessel capacity up to 20 m on the Douro River), but the actual output asserts there are no POIs categorized as \"Marina.\" Per the evaluation steps, this is factually inaccurate and contains a clear contradiction rather than a partial omission, so it merits a very low score.",
+      "passAt": 5
+    },
+    "Q134": {
+      "id": "Q134",
+      "score": 0.7,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly includes Capela Nossa Senhora das Verdades and Nossa Senhora do Ó and references Santo Ildefonso (as Largo), so it captures several expected POIs. However it omits the Museu de Arte Sacra (Sacred Art Museum in Igreja de Santo Ildefonso) and Igreja de São Francisco (noted for baroque sacred art), and adds two locations not in the expected list (Nossa Senhora da Silva Chapel and Church of Nossa Senhora da Vitória). No direct contradictions, but key expected elements are missing, so partial alignment merits a moderate score.",
+      "passAt": 1
+    },
+    "Q135": {
+      "id": "Q135",
+      "score": 0.9,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output uses the same coordinates (rounded) and reports a straight-line distance very close to the expected value (6.23 km vs ~6.4 km — about 0.17 km or ~2.7% difference), so it is factually consistent. It also adds the city (Porto), which is not contradictory. The small distance discrepancy likely stems from rounding or calculation method, so only a minor deduction is warranted.",
+      "passAt": 1
+    },
+    "Q136": {
+      "id": "Q136",
+      "score": 0.8,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The response accurately reproduces the Surftraining House entry (location in Porto, cosy, 100 meters from the beach, surf lessons/trips). It omits the expected GZ Hostel item that offers help organizing surf classes, which is a missing expected element. It also adds an unverified generalization about there being no hotels explicitly dedicated to surfers and that several apartments cater to surfers; this goes beyond the expected output and may be unsupported. Given the accurate Surftraining detail but the omission and extra claim, the output partially matches the expected information.",
+      "passAt": 1
+    },
+    "Q137": {
+      "id": "Q137",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output includes the expected claim that Casa Guedes is well known for its shank sandwiches ('sandes de pernil') and adds accurate, non-contradictory context (located in Porto, serves Portuguese cuisine). There are no incorrect or contradictory statements relative to the expected output.",
+      "passAt": 1
+    },
+    "Q138": {
+      "id": "Q138",
+      "score": 0.8,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly identifies that Madrid POIs include capacity, occupancy, relevance, and priceRange and that those four fields are consistently missing from Porto digital cultural POIs — matching the core expected distinction. It does not, however, mention Porto’s alternate multilingual description fields (description, description_es, description_pt) or Porto’s parking-specific fields (total_slots, available_slots) noted in the expected output, so it is slightly incomplete though not contradictory.",
+      "passAt": 2
+    },
+    "Q139": {
+      "id": "Q139",
+      "score": 0.9,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly states that all Points of Interest in Rua Santos Posada come from the expected data provider (https://api.ropi.porto.digital), matching the main fact in the Expected Output. It omits the specific count of three POIs, but does not present any incorrect or contradictory information. Given the minor missing detail, the response largely aligns with the evaluation steps.",
+      "passAt": 1
+    },
+    "Q140": {
+      "id": "Q140",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "Actual output matches the expected information: the hospital name corresponds to 'Hospital de Santo António (Centro Hospitalar do Porto)' (rendered as Santo António Hospital) and the latitude/longitude values are the same (41.1470563, -8.61790538). There is no incorrect or contradictory information; the extra contextual phrase about Polícia da Câmara Municipal is harmless.",
+      "passAt": 1
+    },
+    "Q141": {
+      "id": "Q141",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output states the same hotel as the expected output (Hotel Moon & Sun Porto) and even clarifies it is nearest to the Museu do Vitral in Porto. The added sentence about Spa Wellness Center do Hotel Solverde being much farther is extra but not contradictory. Factual alignment is maintained with no incorrect information, so it meets the evaluation criteria.",
+      "passAt": 1
+    },
+    "Q142": {
+      "id": "Q142",
+      "score": 0.7,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The response accurately includes two of the four explicitly expected POIs (World of Discoveries and Jumpers Trampolim Park) with correct, relevant descriptions and adds several other appropriate educational POIs (museums, library) for children. However it omits Zoo Santo Inácio and SEA LIFE Porto from the expected list. There is no incorrect or contradictory information, so this is a partial but largely accurate match to the expected output.",
+      "passAt": 2
+    },
+    "Q143": {
+      "id": "Q143",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly identifies WOW in Vila Nova de Gaia as hosting all four expected elements: wine experiences (Pink Palace, tastings), The Chocolate Story, a fashion museum (referred to as Fashion & Design rather than ‘Porto Fashion & Fabric’), and Planet Cork. Location and content are factually accurate with no contradictions; the only minor issue is a naming variation for the fashion venue.",
+      "passAt": 3
+    },
+    "Q144": {
+      "id": "Q144",
+      "score": 0.7,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly includes Paço do Bispo, Porto Exit Games, and World of Discoveries from the expected list, so it aligns partially. It omits Viral Virtual Reality (the 300 m² VR gaming/simulation centre), which is a notable missing expected element. The response adds two unrequested POIs (Extéril and Arquivo Distrital do Porto) that were not in the expected output; these are not directly contradicted by the steps but reduce precision. Overall factual content is largely accurate for the matched items but incomplete with extraneous additions.",
+      "passAt": 1
+    },
+    "Q145": {
+      "id": "Q145",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output contains the expected station name São Bento Railway Station and adds location detail (“200 meters of Praça da Liberdade in the city of Porto”). The added information is not contradictory and the core factual element matches the expected output, with no incorrect claims detected.",
+      "passAt": 1
+    },
+    "Q146": {
+      "id": "Q146",
+      "score": 0.1,
+      "threshold": 0.7,
+      "success": false,
+      "reason": "The actual output contradicts the expected result: the expected closest restaurant is La Chulapa (40.418363, -3.704681) with occupancy 7, but the actual claims Dulzainero (40.41155, -3.705494; occupancy 2) is closest. Based on the provided coordinates, La Chulapa is nearer to Tasca La Pipa (40.415688, -3.704503) than Dulzainero (≈297 m vs ≈467 m), so the answer is factually incorrect and omits the expected restaurant. The response also omits coordinates for some listed alternatives and therefore fails to match the expected output.",
+      "passAt": 5
+    },
+    "Q147": {
+      "id": "Q147",
+      "score": 0.9,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly identifies São Bento da Vitória as a Porto POI now used as a cultural centre and performance venue and notes use for theatrical performances/concerts and partial management by Teatro Nacional de S. João — matching the expected function and manager. It omits the 17th-century origin (an allowed missing element) and calls it a \"convent\" rather than explicitly a 17th‑century Benedictine monastery (a minor inaccuracy), but contains no substantive contradictions.",
+      "passAt": 2
+    },
+    "Q148": {
+      "id": "Q148",
+      "score": 1.0,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output conveys the core facts: it identifies the building as a former gaol and Court of Appeal and correctly states it now houses the Centro Português de Fotografia. It omits the URN and the exact Portuguese building name and does not explicitly mention the restoration, but contains no incorrect or contradictory information, so it aligns with the expected output.",
+      "passAt": 1
+    },
+    "Q149": {
+      "id": "Q149",
+      "score": 0.9,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly matches the key facts from the expected output: the Santo António Hospital (Centro Hospitalar do Porto), the construction dates (1770–1825), the neo‑Palladian/neo‑classical style, and attribution to English architect John Carr. It omits the specific URN and the alternate name 'Port Wine Architecture' and adds an extraneous phrase 'Porto Digital POI', but it does not introduce contradictory facts. These minor omissions lower full credit slightly.",
+      "passAt": 1
+    },
+    "Q150": {
+      "id": "Q150",
+      "score": 0.8,
+      "threshold": 0.7,
+      "success": true,
+      "reason": "The actual output correctly states that Livraria Lello opened in 1906 and that there is no POI in the Porto Digital data described as opening in 1733, matching the key factual claims in the expected output. However the opening sentence is ambiguously worded and could be read as implying a bookshop did open in 1733 (a minor contradictory/unclear phrasing). It also omits the URN present in the expected text. Overall factual alignment is strong despite the ambiguity and missing identifier.",
+      "passAt": 1
+    }
+  },
+  "metrics": {
+    "avgScore": 0.8726666666666669,
+    "total": 150,
+    "not_answered": 17,
+    "passAt": {
+      "pass@1": {
+        "count": 112,
+        "avgScore": 0.723
+      },
+      "pass@2": {
+        "count": 11,
+        "avgScore": 0.789
+      },
+      "pass@3": {
+        "count": 4,
+        "avgScore": 0.815
+      },
+      "pass@4": {
+        "count": 1,
+        "avgScore": 0.822
+      },
+      "pass@5": {
+        "count": 2,
+        "avgScore": 0.834
+      },
+      "pass@6": {
+        "count": 3,
+        "avgScore": 0.851
+      }
+    }
+  },
+  "evaluationSteps": [
+    "Compare the actual output with the expected output to verify factual accuracy.",
+    "Consider the answer correct even if some of the expected elements are missing.",
+    "Evaluate whether there is incorrect or contradictory information in the actual output."
+  ]
+}
